@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SceneMgr 
 {
-    SceneMgr _Instance = new SceneMgr();
-    public SceneMgr Instance
+    private static SceneMgr _Instance = new SceneMgr();
+    public static SceneMgr Instance
     {
         get
         {
@@ -14,6 +14,6 @@ public class SceneMgr
     }
     public void LoadScene(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 }
