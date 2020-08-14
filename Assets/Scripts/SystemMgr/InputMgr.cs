@@ -15,7 +15,6 @@ public class InputMgr : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SceneMgr.Instance.LoadScene("Scene1");//跳到1场景
             Debug.LogError("w");
         }
         else if (Input.GetKeyDown(KeyCode.A))
@@ -41,6 +40,12 @@ public class InputMgr : MonoBehaviour
 
         }
         #endregion
+        #region  切场景例子测试
+        //else if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    SceneMgr.Instance.LoadScene("Scene1");//跳到1场景
 
+        //} 
+        #endregion
     }
 }
