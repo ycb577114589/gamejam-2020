@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Root : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject GameRoot;
     void Start()
     {
-        
+        DontDestroyOnLoad(GameRoot);//切换场景不销毁clone 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        SceneManager.LoadScene("Scene1");//跳到1场景
     }
 }
