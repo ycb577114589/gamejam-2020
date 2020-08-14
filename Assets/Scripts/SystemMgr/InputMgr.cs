@@ -20,7 +20,6 @@ public class InputMgr : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-
             Debug.LogError("a");
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -32,5 +31,16 @@ public class InputMgr : MonoBehaviour
         {
             Debug.LogError("d");
         }
+        #region   血量测试例子
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            PlayerMgr.Instance.Property.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -1);
+            Debug.LogError("test hp " + PlayerMgr.Instance.Property.GetValue(PlayerPropertySys.PropertyValueType.Hp));
+            PlayerMgr.Instance.Property.ChangeValue(PlayerPropertySys.PropertyValueType.Mp, 1);
+            Debug.LogError("test mp " + PlayerMgr.Instance.Property.GetValue(PlayerPropertySys.PropertyValueType.Mp));
+
+        }
+        #endregion
+
     }
 }
