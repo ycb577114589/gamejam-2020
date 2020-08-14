@@ -12,7 +12,7 @@ public class BattleUIMgr : MonoBehaviour
 
     //这个方便直接进入Scene1
     [SerializeField]
-    private GameObject gameRoot;
+    private GameObject gameRoot=null;
 
     void Start()
     {

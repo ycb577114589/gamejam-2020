@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonoRoot : MonoBehaviour
 {
     [SerializeField]
-    private GameObject root;
+    private GameObject root = null;
     public BattleUIMgr BattleUI;
     void Start()
     {
