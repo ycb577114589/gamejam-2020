@@ -8,6 +8,9 @@ public class TimerSys : MonoBehaviour
     public float NightTime = 20f;
     private float currentTime = 0f;
     public bool bMorning = true;
+
+    public GameObject morning = null;
+    public GameObject night = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,20 @@ public class TimerSys : MonoBehaviour
         if (currentTime <= 0)
         {
             GameRoot.Instance.CanContinueTimer = false;
-            Debug.LogError("over");
+            if (bMorning)
+            {
+                bMorning = false;
+                morning.SetActive(false);
+                currentTime = NightTime;
+                night.SetActive(true);
+            }
+            else
+            {
+                bMorning = true;
+                currentTime = MonringTime;
+                morning.SetActive(true);
+                night.SetActive(false);
+            }
 
         }
     }
