@@ -20,4 +20,12 @@ public class MonsterItem : MonoBehaviour
         var monster = GameObject.Instantiate(obj,this.transform.position,this.transform.rotation);
         monster.transform.SetParent (this.gameObject.transform);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.LogError(collision.gameObject.name);
+        if (collision.gameObject.tag == "Weapon")
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
