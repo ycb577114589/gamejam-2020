@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,7 +82,7 @@ public class WallMgr : MonoBehaviour
     }
     public int RandomBase(List<int> radios)
     {
-        System.Random ra = new System.Random();
+        System.Random ra = new System.Random((int)DateTime.Now.ToFileTimeUtc());
         var rd = ra.Next(0, 100);
         int cnt = 0;
         int switchId = 0;
@@ -112,35 +113,27 @@ public class WallMgr : MonoBehaviour
 
         if (switchId == 0)
         {
-            //Debug.LogError("food");
             int itemId = RandomBase(foodsRatio);
             return foods[itemId];
         }
         if (switchId == 1)
         {
-            //Debug.LogError("drug");
             int itemId = RandomBase(drugRatio);
             return drug[itemId];
         }
         if (switchId == 2)
         {
-            //Debug.LogError("battery");
             int itemId = RandomBase(BatteryRatio);
             return battery[itemId];
         }
         if (switchId == 3)
         {
-            //Debug.LogError("others");
             int itemId = RandomBase(othersRatio);
             return others[itemId];
         }
         return null;
     }
-    public bool bCurrentChooseBase = true; 
-    public List<GameObject> foods = new List<GameObject>();
-    public List<GameObject> drug = new List<GameObject>();
-    public List<GameObject> battery = new List<GameObject>();
-    public List<GameObject> others = new List<GameObject>();
+    public bool bCurrentChooseBase = true;
 
     public List<GameObject> box = new List<GameObject>();
     public List<int> baseOrSpecalBox = new List<int>();
@@ -148,10 +141,17 @@ public class WallMgr : MonoBehaviour
     public List<int> baseRadio = new List<int>();
     public List<int> specialRadio = new List<int>();
 
+    public List<GameObject> foods = new List<GameObject>();
     public List<int> foodsRatio = new List<int>();
+
+    public List<GameObject> drug = new List<GameObject>();
     public List<int> drugRatio = new List<int>();
+
+    public List<GameObject> battery = new List<GameObject>();
     public List<int> BatteryRatio = new List<int>();
+    public List<GameObject> others = new List<GameObject>();
     public List<int> othersRatio = new List<int>();
+
 
 
 

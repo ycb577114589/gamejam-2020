@@ -1460,28 +1460,28 @@ MonoBehaviour:
   wallListRatio: 3200000032000000
   refreshTime: 2
   bCurrentChooseBase: 1
+  box:
+  - {fileID: 6915183970708991908, guid: 62e922a9bd19a7842a0d74a340ee947b, type: 3}
+  - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
+  baseOrSpecalBox: 5a0000000a000000
+  baseRadio: 1e0000001e00000028000000
+  specialRadio: 19000000190000001900000019000000
   foods:
   - {fileID: 1424137985170409809, guid: de1ede3b5195b164dadef58c5a7cd722, type: 3}
   - {fileID: 1424137985170409809, guid: 8c9978c8139e331458d32bad779c412b, type: 3}
   - {fileID: 1424137985170409809, guid: 04a64ba3977f8c84881b92426c1a4f20, type: 3}
   - {fileID: 1424137985170409809, guid: e99dab67857f48d438962b97a928c816, type: 3}
+  foodsRatio: 19000000190000001900000019000000
   drug:
   - {fileID: 7808095614569895928, guid: bb8c8637aff26374e9eade3b65ab419b, type: 3}
   - {fileID: 7808095614569895928, guid: 35417ea3802234d49a796cab55487ec1, type: 3}
   - {fileID: 7808095614569895928, guid: 1c8bd9472beb20243b4b30e474a2d92d, type: 3}
+  drugRatio: 280000002800000014000000
   battery:
   - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
+  BatteryRatio: 64000000
   others:
   - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
-  box:
-  - {fileID: 6915183970708991908, guid: 62e922a9bd19a7842a0d74a340ee947b, type: 3}
-  - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
-  baseOrSpecalBox: 460000001e000000
-  baseRadio: 1e0000001e00000028000000
-  specialRadio: 19000000190000001900000019000000
-  foodsRatio: 19000000190000001900000019000000
-  drugRatio: 280000002800000014000000
-  BatteryRatio: 64000000
   othersRatio: 
 --- !u!1 &700662918
 GameObject:
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 1
+  MonringTime: 15
   NightTime: 15
   bMorning: 1
   morning: {fileID: 971077299}
@@ -4012,7 +4012,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e30dbecb58f02d459736776a540097d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mPropertyValueMax: 640000006400000064000000
+  mPropertyValueMax:
+  - 100
+  - 100
+  - 100
+  lastAddTime: 0
+  currentTime: 0
+  hpRiseNumber: 0
+  maxTime: 0
+  deltaAddHp: 0
 --- !u!114 &1805297264
 MonoBehaviour:
   m_ObjectHideFlags: 0
