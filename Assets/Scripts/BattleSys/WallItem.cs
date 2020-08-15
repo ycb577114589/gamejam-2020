@@ -13,6 +13,7 @@ public class WallItem : MonoBehaviour
     private bool bRefreshItem = false;
 
     private int activeNumber = 0;
+    private BoxCollider2D collider;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class WallItem : MonoBehaviour
         {
             itemSlot[i].SetActive(false);
         }
+        collider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -38,7 +40,6 @@ public class WallItem : MonoBehaviour
             {
                 if (rd <= itemSlotRatio[i] && !bActive[i])
                 {
-                    Debug.LogError("succes");
                     bRefreshItem = false;
                     activeNumber++;
                     bActive[i] = true;
@@ -62,5 +63,8 @@ public class WallItem : MonoBehaviour
             bRefreshItem = value;
         }
     }
-
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.LogError(other.name);
+    }
 }

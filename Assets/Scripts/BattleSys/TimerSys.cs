@@ -17,12 +17,14 @@ public class TimerSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while(currentTime != 0)
+        if(currentTime != 0)
         {
             currentTime -= Time.deltaTime;
         }
         if (currentTime <= 0)
         {
+            GameRoot.Instance.CanContinueTimer = false;
+            Debug.LogError("over");
 
         }
     }
