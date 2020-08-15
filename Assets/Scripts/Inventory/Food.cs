@@ -38,13 +38,13 @@ public class Food : MonoBehaviour,IPointerClickHandler
                 switch (Quality)
                 {
                     case Inventory.ItemQuality.common:
-                        intro += "普通胡萝卜 3S内回复20HP";
+                        intro += "普通饭团 3S内回复30HP";
                         break;
                     case Inventory.ItemQuality.rare:
-                        intro += "稀有胡萝卜 3S内回复30HP";
+                        intro += "稀有饭团 3S内回复40HP";
                         break;
                     case Inventory.ItemQuality.epic:
-                        intro += "至尊胡萝卜 3S内回复40HP";
+                        intro += "至尊饭团 3S内回复50HP";
                         break;
                 }
                 break;
@@ -52,13 +52,13 @@ public class Food : MonoBehaviour,IPointerClickHandler
                 switch (Quality)
                 {
                     case Inventory.ItemQuality.common:
-                        intro += "普通饭团 3S内回复30HP";
+                        intro += "普通胡萝卜 3S内回复20HP";
                         break;
                     case Inventory.ItemQuality.rare:
-                        intro+= "稀有饭团 3S内回复40HP";
+                        intro += "稀有胡萝卜 3S内回复30HP";
                         break;
                     case Inventory.ItemQuality.epic:
-                        intro += "至尊饭团 3S内回复50HP";
+                        intro += "至尊胡萝卜 3S内回复40HP";
                         break;
                 }
                 break;

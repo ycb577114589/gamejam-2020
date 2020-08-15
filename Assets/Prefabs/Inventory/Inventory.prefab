@@ -198,6 +198,7 @@ MonoBehaviour:
   - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
   upgrade:
   - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
+  - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
   other:
   - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
 --- !u!1 &9180038600917088001
@@ -422,7 +423,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab18a41c564fef3489314322885ff7d6, type: 3}
-    m_FontSize: 143
+    m_FontSize: 106
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

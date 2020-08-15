@@ -27,3 +27,4 @@ public class InventoryManager : MonoBehaviour
         //iv.SetInventory(Inventory.ItemType.drug, 2);
     }
 }
+

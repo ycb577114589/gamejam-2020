@@ -8,6 +8,12 @@ public class Upgrade : MonoBehaviour
 {
     private int ID;
     public string intro="";
+
+    private bool hasEquiped;
+    private bool buff=false;
+    private bool deBuff=false;
+
+    PlayerWeaponSys playerWeaponSys;
     public void SetUpgrade(int id)
     {
         this.ID = id;
@@ -21,4 +27,44 @@ public class Upgrade : MonoBehaviour
                 break;
         }
     }
+    private void Start()
+    {
+        playerWeaponSys = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerWeaponSys>();
+    }
+    private void Update()
+    {
+        if(gameObject.transform.parent.tag=="Slot")
+        {//装备上
+            if(buff==false)
+            {
+                if(ID==1)
+                {
+                    playerWeaponSys.AddLength();
+                }
+                else if(ID==2)
+                {
+                    playerWeaponSys.AddWidth();
+                }
+                buff = true;
+                deBuff = false;
+            }
+        }
+        else
+        {//没装备上
+            if(deBuff==false)
+            {
+                if(ID==1)
+                {
+                    playerWeaponSys.ReduceLength();
+                }
+                else if(ID==2)
+                {
+                    playerWeaponSys.ReduceWidth();
+                }
+                buff = false;
+                deBuff = true;
+            }
+        }
+    }
+
 }
