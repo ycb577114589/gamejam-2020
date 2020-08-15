@@ -12,7 +12,11 @@ public class InputMgr : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        if (!GameRoot.Instance.CanContinueTimer)
+        {
+            return;
+        }
         #region   血量测试例子
         if (Input.GetKeyDown(KeyCode.H))
         {

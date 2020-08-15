@@ -8,6 +8,7 @@ public class MonoRoot : MonoBehaviour
     [SerializeField]
     private GameObject root = null;
     public BattleUIMgr BattleUI;
+     
     void Start()
     {
         GameRoot.SetMonoRoot(this);
@@ -17,13 +18,13 @@ public class MonoRoot : MonoBehaviour
     void Update()
     { 
 
-    }
+    } 
 }
 
 public class GameRoot
 {
     private static GameRoot mInstance = new GameRoot();
-    public GameRoot Instance
+    public static GameRoot Instance
     {
         get
         {
@@ -38,6 +39,19 @@ public class GameRoot
     }
     #endregion
 
+    private bool bContinue = true;
+
+    public bool CanContinueTimer
+    {
+        get
+        {
+            return bContinue;
+        }
+        set
+        {
+            bContinue = value;
+        }
+    }
     public static MonoRoot MonoRootInstanceScene
     {
         get
