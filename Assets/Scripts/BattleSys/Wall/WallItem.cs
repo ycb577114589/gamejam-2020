@@ -22,7 +22,7 @@ public class WallItem : MonoBehaviour
             InventoryBase item = myContent.GetComponent<InventoryBase>();
             GameRoot.BattleUIMgrInScene.inventory.CreatePanel(item.type, item.id, item.quality, Inventory.FoodState.good);
             //iv.SetInventory(Inventory.ItemType.food, 3, Inventory.ItemQuality.common, Inventory.FoodState.good);
-            //this.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }

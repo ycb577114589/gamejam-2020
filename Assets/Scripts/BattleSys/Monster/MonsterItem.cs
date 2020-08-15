@@ -60,8 +60,8 @@ public class MonsterItem : MonoBehaviour
         time = 0;
         isWalk = true;
     }
-    private float attackDistance = 10000;
-    private float attackRefreshTime = 1f;
+    public float attackDistance = 10000;
+    public float attackRefreshTime = 1f;
     private float currentAttackTime = 0f;
     void FixedUpdate()
     {

@@ -200,7 +200,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 110, y: 54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3635240018676986922
 CanvasRenderer:
@@ -230,7 +230,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7ca4d627edf2a3842848bb73d00a19e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -252,7 +252,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.30384827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -263,7 +263,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 100}
+  m_Size: {x: 100, y: 60.464264}
   m_EdgeRadius: 5
 --- !u!114 &8208867320556918098
 MonoBehaviour:
@@ -284,6 +284,9 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 0}
   index: 0
   isWalk: 0
+  player: {fileID: 0}
+  attackDistance: 10000
+  attackRefreshTime: 1
 --- !u!50 &6288959364255719934
 Rigidbody2D:
   serializedVersion: 4
