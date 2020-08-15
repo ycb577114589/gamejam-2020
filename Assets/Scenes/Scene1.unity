@@ -531,7 +531,7 @@ MonoBehaviour:
   - {fileID: 782447997}
   - {fileID: 1444466318}
   - {fileID: 730185933}
-  itemSlotRatio: 640000006400000064000000
+  itemSlotRatio: 1e0000001e00000028000000
   thing: {fileID: 0}
 --- !u!61 &224474974
 BoxCollider2D:
@@ -1457,16 +1457,31 @@ MonoBehaviour:
   wallList:
   - {fileID: 1183455309}
   - {fileID: 224474973}
-  wallListRatio: 3200000064000000
+  wallListRatio: 3200000032000000
   refreshTime: 2
-  foods: []
-  drug: []
-  battery: []
-  others: []
-  baseRadio: 19000000190000001900000019000000
-  foodsRatio: 
-  drugRatio: 
-  BatteryRatio: 
+  bCurrentChooseBase: 1
+  foods:
+  - {fileID: 1424137985170409809, guid: de1ede3b5195b164dadef58c5a7cd722, type: 3}
+  - {fileID: 1424137985170409809, guid: 8c9978c8139e331458d32bad779c412b, type: 3}
+  - {fileID: 1424137985170409809, guid: 04a64ba3977f8c84881b92426c1a4f20, type: 3}
+  - {fileID: 1424137985170409809, guid: e99dab67857f48d438962b97a928c816, type: 3}
+  drug:
+  - {fileID: 7808095614569895928, guid: bb8c8637aff26374e9eade3b65ab419b, type: 3}
+  - {fileID: 7808095614569895928, guid: 35417ea3802234d49a796cab55487ec1, type: 3}
+  - {fileID: 7808095614569895928, guid: 1c8bd9472beb20243b4b30e474a2d92d, type: 3}
+  battery:
+  - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
+  others:
+  - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
+  box:
+  - {fileID: 6915183970708991908, guid: 62e922a9bd19a7842a0d74a340ee947b, type: 3}
+  - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
+  baseOrSpecalBox: 460000001e000000
+  baseRadio: 1e0000001e00000028000000
+  specialRadio: 19000000190000001900000019000000
+  foodsRatio: 19000000190000001900000019000000
+  drugRatio: 280000002800000014000000
+  BatteryRatio: 64000000
   othersRatio: 
 --- !u!1 &700662918
 GameObject:
@@ -2616,7 +2631,7 @@ MonoBehaviour:
   - {fileID: 180735502}
   - {fileID: 1287896548}
   - {fileID: 98540309}
-  itemSlotRatio: 0a0000001e00000064000000
+  itemSlotRatio: 1e0000001e00000028000000
   thing: {fileID: 0}
 --- !u!1 &1248146920
 GameObject:
@@ -2711,7 +2726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonringTime: 15
-  NightTime: 15
+  NightTime: 1
   bMorning: 1
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}

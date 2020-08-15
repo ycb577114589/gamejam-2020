@@ -34,22 +34,45 @@ public class WallItemSys : MonoBehaviour
     {
         if (bRefreshItem)
         {
+            Debug.LogError("2");
             System.Random ra = new System.Random();
-            var rd = ra.Next(0,100); 
-            for(int i =0; i < itemSlot.Count; i++)
+            int rd = ra.Next(0, 100);
+            int cnt = 0;
+            int chooseItem = -1;
+            for (int i = 0; i < itemSlot.Count; i++)
             {
-                if (rd <= itemSlotRatio[i] && !bActive[i])
+                cnt += itemSlotRatio[i];
+                if (rd <= itemSlotRatio[i] &&  !bActive[i])
                 {
-                    bRefreshItem = false;
-                    activeNumber++;
-                    bActive[i] = true;
-                    itemSlot[i].SetActive(true);
-                    var obj = GameObject.Instantiate(thing,this.transform);
+                    chooseItem = i;
                     break;
                 }
             }
+
+            if (chooseItem == -1)
+            {
+                for (int i = 0; i < itemSlot.Count; i++)
+                {
+                    if (!bActive[i])
+                    {
+                        chooseItem = i;
+                        break;
+                    }
+                }
+            }
+            if (chooseItem != -1)
+            {
+                bRefreshItem = false;
+                activeNumber++;
+                bActive[chooseItem] = true;
+                itemSlot[chooseItem].SetActive(true);
+                var obj = GameObject.Instantiate(mBox, itemSlot[chooseItem].transform);
+                obj.transform.SetParent(itemSlot[chooseItem].transform);
+
+            }
         }
     }
+
 
     public bool Over {
         get
@@ -69,6 +92,14 @@ public class WallItemSys : MonoBehaviour
         set
         {
             thing = value;
+        }
+    }
+    private GameObject mBox = null;
+    public GameObject Box
+    {
+        set
+        {
+            mBox = value;
         }
     }
 }

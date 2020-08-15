@@ -22,7 +22,11 @@ public class MorningSys : MonoBehaviour
             WallItemSys item = mWallMgr.wallList[i];
             for(int j = 0; j< item.itemSlot.Count; j++)
             {
-                item.itemSlot[j].SetActive(false);
+                int childCount = item.itemSlot[j].transform.childCount;
+                for (int k = 0; k < childCount; k++)
+                {
+                    Destroy(item.itemSlot[j].transform.GetChild(0).gameObject);
+                }
             }
         }
         
