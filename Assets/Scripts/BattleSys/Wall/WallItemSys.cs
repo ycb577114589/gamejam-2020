@@ -12,7 +12,9 @@ public class WallItemSys : MonoBehaviour
     private bool[] bActive;
     private bool bRefreshItem = false;
 
-    private int activeNumber = 0; 
+    private int activeNumber = 0;
+
+    public GameObject thing = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,12 +44,13 @@ public class WallItemSys : MonoBehaviour
                     activeNumber++;
                     bActive[i] = true;
                     itemSlot[i].SetActive(true);
+                    var obj = GameObject.Instantiate(thing,this.transform);
                     break;
                 }
             }
         }
-
     }
+
     public bool Over {
         get
         {
@@ -61,4 +64,11 @@ public class WallItemSys : MonoBehaviour
             bRefreshItem = value;
         }
     } 
+    public GameObject SetThing
+    {
+        set
+        {
+            thing = value;
+        }
+    }
 }

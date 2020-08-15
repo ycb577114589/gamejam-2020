@@ -36,11 +36,63 @@ public class WallMgr : MonoBehaviour
             {
                 if (rd <= wallListRatio[i] && !wallList[i].Over)
                 {
-                    wallList[i].SetCanRefresh = true;
+                    RandomThing();
+                    //wallList[i].SetCanRefresh = true;
+                    //wallList[i].SetThing(RandomThing());
                     break;
                 }
             }
             currentTime = refreshTime;
         }
     }
+    public int RandomBase(List<int> radios)
+    {
+        System.Random ra = new System.Random();
+        var rd = ra.Next(0, 100);
+        int cnt = 0;
+        int switchId = 0;
+        for (int i = 0; i < radios.Count; i++)
+        {
+            cnt += radios[i];
+            if (rd <= cnt)
+            {
+                switchId = i;
+                break;
+            }
+        }
+        return switchId;
+    }
+    public GameObject RandomThing()
+    {
+        int switchId = RandomBase(baseRadio);
+        if (switchId == 0)
+        {
+            Debug.LogError("food");
+        }
+        if (switchId == 1)
+        {
+            Debug.LogError("drug");
+        }
+        if (switchId == 2)
+        {
+            Debug.LogError("battery");
+        }
+        if (switchId == 3)
+        {
+            Debug.LogError("others");
+        }
+        return null;
+    }
+    public List<GameObject> foods = new List<GameObject>();
+    public List<GameObject> drug = new List<GameObject>();
+    public List<GameObject> battery = new List<GameObject>();
+    public List<GameObject> others = new List<GameObject>();
+
+    public List<int> baseRadio = new List<int>();
+
+    public List<int> foodsRatio = new List<int>();
+    public List<int> drugRatio = new List<int>();
+    public List<int> BatteryRatio = new List<int>();
+    public List<int> othersRatio = new List<int>();
+
 }
