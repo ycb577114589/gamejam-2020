@@ -30,16 +30,47 @@ public class WallMgr : MonoBehaviour
 
         if (currentTime <= 0)
         {
+            Debug.LogError("1");
             System.Random ra = new System.Random();
             int rd = ra.Next(0, 100);
+            int cnt = 0;
+            int chooseItem = -1;
             for (int i = 0; i < wallList.Count; i++)
             {
+                cnt += wallListRatio[i];
                 if (rd <= wallListRatio[i] && !wallList[i].Over)
                 {
-                    RandomThing();
-                    //wallList[i].SetCanRefresh = true;
-                    //wallList[i].SetThing(RandomThing());
+                    chooseItem = i;
                     break;
+                }
+            }
+            if (chooseItem == -1)
+            {
+                for (int i = 0; i < wallList.Count; i++)
+                {
+                    if (!wallList[i].Over)
+                    {
+                        chooseItem = i;
+                        break;
+                    }
+                }
+            }
+            if (chooseItem != -1)
+            {
+                RandomThing();
+                var createObj = RandomThing();
+                if (createObj != null)
+                {
+                    wallList[chooseItem].SetThing = RandomThing();
+                    if (bCurrentChooseBase)
+                    {
+                        wallList[chooseItem].Box = box[0];
+                    }
+                    else
+                    {
+                        wallList[chooseItem].Box = box[1];
+                    }
+                    wallList[chooseItem].SetCanRefresh = true;
                 }
             }
             currentTime = refreshTime;
@@ -64,35 +95,60 @@ public class WallMgr : MonoBehaviour
     }
     public GameObject RandomThing()
     {
-        int switchId = RandomBase(baseRadio);
+        int switchBaseOrSpecial = RandomBase(baseOrSpecalBox);
+
+        var chooseBaseOrSpecial = baseRadio;
+        bCurrentChooseBase = true;
+
+        if (switchBaseOrSpecial == 1)
+        {
+            bCurrentChooseBase = false;
+            chooseBaseOrSpecial = specialRadio;
+        }
+        int switchId = RandomBase(chooseBaseOrSpecial);
         if (switchId == 0)
         {
-            Debug.LogError("food");
+            //Debug.LogError("food");
+            int itemId = RandomBase(foodsRatio);
+            return foods[itemId];
         }
         if (switchId == 1)
         {
-            Debug.LogError("drug");
+            //Debug.LogError("drug");
+            int itemId = RandomBase(drugRatio);
+            return drug[itemId];
         }
         if (switchId == 2)
         {
-            Debug.LogError("battery");
+            //Debug.LogError("battery");
+            int itemId = RandomBase(BatteryRatio);
+            return battery[itemId];
         }
         if (switchId == 3)
         {
-            Debug.LogError("others");
+            //Debug.LogError("others");
+            int itemId = RandomBase(othersRatio);
+            return others[itemId];
         }
         return null;
     }
+    public bool bCurrentChooseBase = true; 
     public List<GameObject> foods = new List<GameObject>();
     public List<GameObject> drug = new List<GameObject>();
     public List<GameObject> battery = new List<GameObject>();
     public List<GameObject> others = new List<GameObject>();
 
+    public List<GameObject> box = new List<GameObject>();
+    public List<int> baseOrSpecalBox = new List<int>();
+
     public List<int> baseRadio = new List<int>();
+    public List<int> specialRadio = new List<int>();
 
     public List<int> foodsRatio = new List<int>();
     public List<int> drugRatio = new List<int>();
     public List<int> BatteryRatio = new List<int>();
     public List<int> othersRatio = new List<int>();
+
+
 
 }
