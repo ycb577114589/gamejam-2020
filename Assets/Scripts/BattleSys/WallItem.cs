@@ -5,20 +5,21 @@ using UnityEngine;
 public class WallItem : MonoBehaviour
 {
 
-    private BoxCollider2D collider = null;
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    } 
-    public void OnCollisionEnter(Collision collision)
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.LogError(collision.gameObject.name);
+        if (collision.gameObject.tag == "Player")
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }
