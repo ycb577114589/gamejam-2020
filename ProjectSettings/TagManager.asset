@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameRoot
   - Slot
+  - Wall
   layers:
   - Default
   - TransparentFX

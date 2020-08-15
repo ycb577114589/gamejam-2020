@@ -12,26 +12,9 @@ public class InputMgr : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.LogError("w");
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.LogError("a");
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-
-            Debug.LogError("s");
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.LogError("d");
-        }
+    { 
         #region   血量测试例子
-        else if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             PlayerMgr.Instance.Property.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -1);
             Debug.LogError("test hp " + PlayerMgr.Instance.Property.GetValue(PlayerPropertySys.PropertyValueType.Hp));
