@@ -26,6 +26,7 @@ public class InventoryManager : MonoBehaviour
         //这里生成了一个大型药箱
         //iv.SetInventory(Inventory.ItemType.drug, 2);
     }
+
     public void CreatePanel(ItemType type, int id, ItemQuality quality, FoodState state = FoodState.good)
     {
         GameObject go = GameObject.Instantiate(go_Inventory, transform.position, Quaternion.identity, transform);//先生成InventoryGameObject

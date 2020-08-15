@@ -2960,8 +2960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151.59, y: 40}
-  m_SizeDelta: {x: 670.11, y: 591.12}
+  m_AnchoredPosition: {x: 172.6, y: 8.1}
+  m_SizeDelta: {x: 640.8, y: 542.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!68 &1183455306
 EdgeCollider2D:

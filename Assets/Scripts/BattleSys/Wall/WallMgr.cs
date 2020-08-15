@@ -65,7 +65,11 @@ public class WallMgr : MonoBehaviour
                 GameObject createObj = RandomThing(); 
                 if (createObj != null)
                 {
+                    InventoryBase inventory =createObj.GetComponent<InventoryBase>();
+
+
                     wallList[chooseItem].SetThing = createObj;
+
                     if (bCurrentChooseBase)
                     {
                         wallList[chooseItem].Box = box[0];
