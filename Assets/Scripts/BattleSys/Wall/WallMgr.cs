@@ -19,6 +19,10 @@ public class WallMgr : MonoBehaviour
         currentTime = refreshTime;
     }
 
+    public void Reset()
+    {
+                
+    }
     // Update is called once per frame
     void Update()
     {
@@ -30,20 +34,20 @@ public class WallMgr : MonoBehaviour
 
         if (currentTime <= 0)
         {
-            Debug.LogError("1");
             System.Random ra = new System.Random();
             int rd = ra.Next(0, 100);
             int cnt = 0;
             int chooseItem = -1;
             for (int i = 0; i < wallList.Count; i++)
             {
-                cnt += wallListRatio[i];
-                if (rd <= wallListRatio[i] && !wallList[i].Over)
+                cnt += wallListRatio[i]; 
+                if (rd <= cnt && !wallList[i].Over)
                 {
                     chooseItem = i;
                     break;
                 }
             }
+
             if (chooseItem == -1)
             {
                 for (int i = 0; i < wallList.Count; i++)
@@ -57,11 +61,10 @@ public class WallMgr : MonoBehaviour
             }
             if (chooseItem != -1)
             {
-                RandomThing();
-                var createObj = RandomThing();
+                GameObject createObj = RandomThing(); 
                 if (createObj != null)
                 {
-                    wallList[chooseItem].SetThing = RandomThing();
+                    wallList[chooseItem].SetThing = createObj;
                     if (bCurrentChooseBase)
                     {
                         wallList[chooseItem].Box = box[0];
@@ -106,6 +109,7 @@ public class WallMgr : MonoBehaviour
             chooseBaseOrSpecial = specialRadio;
         }
         int switchId = RandomBase(chooseBaseOrSpecial);
+
         if (switchId == 0)
         {
             //Debug.LogError("food");

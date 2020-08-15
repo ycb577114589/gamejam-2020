@@ -28,6 +28,8 @@ public class MorningSys : MonoBehaviour
                     Destroy(item.itemSlot[j].transform.GetChild(0).gameObject);
                 }
             }
+
+            item.Reset();
         }
         
     }

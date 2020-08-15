@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.83
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.83
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -2167,6 +2167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_Inventory: {fileID: 9180038600913653601, guid: 1eb8c90edab6b6b41872008ad2d99cf3,
     type: 3}
+  inventory: {fileID: 0}
 --- !u!1 &1084011907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,8 +2620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 15
-  NightTime: 1
+  MonringTime: 1
+  NightTime: 15
   bMorning: 1
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}
@@ -4852,5 +4853,10 @@ PrefabInstance:
       propertyPath: AirWall.Array.data[14]
       value: 
       objectReference: {fileID: 1906079737}
+    - target: {fileID: 9174051993520888875, guid: 45e3657dae5491649a6cf23e0aa6d74b,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1081773600}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e3657dae5491649a6cf23e0aa6d74b, type: 3}

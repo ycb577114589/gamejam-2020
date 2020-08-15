@@ -15,6 +15,7 @@ public class BattleUIMgr : MonoBehaviour
     private GameObject gameRoot=null;
 
     public List<GameObject> AirWall = new List<GameObject>();
+    public InventoryManager inventory = null;
     void Start()
     {
 
@@ -28,6 +29,7 @@ public class BattleUIMgr : MonoBehaviour
 
         MonoRoot GameRoot = root.GetComponent<MonoRoot>();
         GameRoot.BattleUI = this;
+
     }
 
     // Update is called once per frame

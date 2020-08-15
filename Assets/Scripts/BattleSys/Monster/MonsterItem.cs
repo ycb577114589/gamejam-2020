@@ -20,11 +20,6 @@ public class MonsterItem : MonoBehaviour
             hp.value = currentHp * 1.0f / MaxHp;
             if (currentHp <= 0)
                 this.gameObject.SetActive(false);
-        }
-        if (collision.gameObject.tag == "Player")
-        {
-            if(playerProperty!=null)
-                playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
         } 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -35,7 +30,7 @@ public class MonsterItem : MonoBehaviour
             int rd = ra.Next(0,GameRoot.BattleUIMgrInScene.AirWall.Count);
 
             dir = GameRoot.BattleUIMgrInScene.AirWall[rd].transform.position - collision.transform.position;//给游戏物体一个到随机点的方向，这个方向就是它接下来的运动方向。
-        }
+        } 
     }
 
     public float speed = 50;
@@ -45,8 +40,11 @@ public class MonsterItem : MonoBehaviour
     public bool isWalk;//状态判断
     private Animator Anim;
     // Start is called before the first frame update
+
+    public GameObject player = null;
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         currentHp = MaxHp;
         //写个很挫的代码.
         var temp = GameObject.FindWithTag("Player");
@@ -62,9 +60,25 @@ public class MonsterItem : MonoBehaviour
         time = 0;
         isWalk = true;
     }
+    private float attackDistance = 10000;
+    private float attackRefreshTime = 1f;
+    private float currentAttackTime = 0f;
     void FixedUpdate()
     {
         time += Time.deltaTime;//定时
+        currentAttackTime -= Time.deltaTime;
+        int dis =(int) (transform.position - player.transform.position).sqrMagnitude;
+        if (currentAttackTime > 0)
+        {
+            return;
+        }
+        if(dis<= attackDistance&&currentAttackTime<=0)
+        {
+            currentAttackTime = attackRefreshTime;
+            if (playerProperty != null)
+                playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
+            return;
+        }
         if (isWalk)
         {
             //运动: anim.play("run")

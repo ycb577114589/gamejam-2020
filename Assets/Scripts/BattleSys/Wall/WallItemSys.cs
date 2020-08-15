@@ -28,13 +28,19 @@ public class WallItemSys : MonoBehaviour
             itemSlot[i].SetActive(false);
         } 
     }
-
+    public void Reset()
+    {
+        activeNumber = 0;
+        for (int i = 0; i < bActive.Length; i++)
+        {
+            bActive[i] = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
         if (bRefreshItem)
         {
-            Debug.LogError("2");
             System.Random ra = new System.Random();
             int rd = ra.Next(0, 100);
             int cnt = 0;
@@ -42,7 +48,7 @@ public class WallItemSys : MonoBehaviour
             for (int i = 0; i < itemSlot.Count; i++)
             {
                 cnt += itemSlotRatio[i];
-                if (rd <= itemSlotRatio[i] &&  !bActive[i])
+                if (rd <= cnt &&  !bActive[i])
                 {
                     chooseItem = i;
                     break;
@@ -68,6 +74,7 @@ public class WallItemSys : MonoBehaviour
                 itemSlot[chooseItem].SetActive(true);
                 var obj = GameObject.Instantiate(mBox, itemSlot[chooseItem].transform);
                 obj.transform.SetParent(itemSlot[chooseItem].transform);
+                obj.GetComponent<WallItem>().myContent = thing;
 
             }
         }

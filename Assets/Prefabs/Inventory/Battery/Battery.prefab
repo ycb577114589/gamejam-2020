@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 580941881446918312}
   - component: {fileID: 580941881446918313}
   - component: {fileID: 580941881446918314}
+  - component: {fileID: 2274243931322899845}
   m_Layer: 5
   m_Name: Battery
   m_TagString: Item
@@ -94,6 +95,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  intro: 
 --- !u!114 &580941881446918314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNew: 1
+--- !u!114 &2274243931322899845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580941881446918316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6463d099129286446b20b6a0bc228dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  id: 0
+  quality: 0

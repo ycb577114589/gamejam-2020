@@ -11,8 +11,8 @@ public class PlayerPropertySys  :MonoBehaviour
         Count=3,
     };
 
-    private int[] mPropertyValue = new int[(int)PropertyValueType.Count];
-    public int[] mPropertyValueMax = new int [(int)PropertyValueType.Count];
+    private float[] mPropertyValue = new float[(int)PropertyValueType.Count];
+    public float[] mPropertyValueMax = new float[(int)PropertyValueType.Count];
 
     public void Start()
     {
@@ -22,7 +22,7 @@ public class PlayerPropertySys  :MonoBehaviour
         }
     }
 
-    public void ChangeValue(PropertyValueType type,int changeValue)
+    public void ChangeValue(PropertyValueType type,float changeValue)
     {
         if (type <= PropertyValueType.Count)
         {
@@ -40,8 +40,6 @@ public class PlayerPropertySys  :MonoBehaviour
             }
         }
         float value = ( mPropertyValue[(int)type] * 1.0f) / mPropertyValueMax[(int)type]; ;
-        Debug.Log(mPropertyValue[(int)type]);
-        Debug.Log(mPropertyValueMax[(int)type]);
         switch (type)
         {
             case PropertyValueType.Hp:
@@ -52,8 +50,40 @@ public class PlayerPropertySys  :MonoBehaviour
                 break;
         }
     }
+    public float lastAddTime = 0f;
+    public float currentTime = 0f;
+    public float hpRiseNumber = 0f;
+    public float maxTime = 0f;
+    public float deltaAddHp = 0f;
 
-    public int GetValue(PropertyValueType type )
+    //只给血条用
+    public void ChangeValue(PropertyValueType type, int changeValue,float deltaTime)
+    {
+        if (type <= PropertyValueType.Count)
+        {
+            hpRiseNumber = hpRiseNumber + changeValue;
+            currentTime = 0f;
+            lastAddTime = 0f;
+            maxTime = deltaTime;
+            deltaAddHp = hpRiseNumber / deltaTime;
+        } 
+    }
+    public void Update()
+    {
+        currentTime += Time.deltaTime;
+        if(currentTime - lastAddTime > 1)
+        {
+            lastAddTime += 1;
+            ChangeValue(PropertyValueType.Hp, deltaAddHp);
+            hpRiseNumber -= deltaAddHp;
+        }
+        if (maxTime <= currentTime)
+        {
+            lastAddTime = 0f; currentTime = 0f; hpRiseNumber = 0f; maxTime = 0f; deltaAddHp = 0f;
+        }
+    }
+
+    public float GetValue(PropertyValueType type )
     { 
         if( type <= PropertyValueType.Count)
         {

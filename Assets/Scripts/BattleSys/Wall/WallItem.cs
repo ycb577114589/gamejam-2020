@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WallItem : MonoBehaviour
 {
-
+    public GameObject myContent = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,10 @@ public class WallItem : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            this.gameObject.SetActive(false);
+            InventoryBase item = myContent.GetComponent<InventoryBase>();
+            GameRoot.BattleUIMgrInScene.inventory.CreatePanel(item.type, item.id, item.quality, Inventory.FoodState.good);
+            //iv.SetInventory(Inventory.ItemType.food, 3, Inventory.ItemQuality.common, Inventory.FoodState.good);
+            //this.gameObject.SetActive(false);
         }
     }
 }
