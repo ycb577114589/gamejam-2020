@@ -26,10 +26,10 @@ public class TimerSys : MonoBehaviour
         }
         if (currentTime <= 0)
         {
-            //GameRoot.Instance.CanContinueTimer = false;
             if (bMorning)
             {
                 bMorning = false;
+                morning.GetComponent<MorningSys>().MorningOver();
                 morning.SetActive(false);
                 currentTime = NightTime;
                 night.SetActive(true);
@@ -37,6 +37,7 @@ public class TimerSys : MonoBehaviour
             else
             {
                 bMorning = true;
+                night.GetComponent<NightSys>().NightOver();
                 currentTime = MonringTime;
                 morning.SetActive(true);
                 night.SetActive(false);

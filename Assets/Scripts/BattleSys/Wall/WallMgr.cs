@@ -29,7 +29,7 @@ public class WallMgr : MonoBehaviour
         if (currentTime <= 0)
         {
             System.Random ra = new System.Random();
-            var rd = ra.Next(0, 100);
+            int rd = ra.Next(0, 100);
             for (int i = 0; i < wallList.Count; i++)
             {
                 if (rd <= wallListRatio[i] && !wallList[i].Over)

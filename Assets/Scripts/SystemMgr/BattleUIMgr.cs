@@ -14,6 +14,7 @@ public class BattleUIMgr : MonoBehaviour
     [SerializeField]
     private GameObject gameRoot=null;
 
+    public List<GameObject> AirWall = new List<GameObject>();
     void Start()
     {
 

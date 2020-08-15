@@ -8,7 +8,7 @@ public class MonoRoot : MonoBehaviour
     [SerializeField]
     private GameObject root = null;
     public BattleUIMgr BattleUI;
-     
+    
     void Start()
     {
         GameRoot.SetMonoRoot(this);
@@ -50,6 +50,19 @@ public class GameRoot
         set
         {
             bContinue = value;
+        }
+    }
+
+    private int mLevel = 1;
+    public int Level
+    {
+        get
+        {
+            return mLevel;
+        }
+        set
+        {
+            mLevel = value;
         }
     }
     public static MonoRoot MonoRootInstanceScene

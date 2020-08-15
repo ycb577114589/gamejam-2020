@@ -25,6 +25,7 @@ public class PlayerMoveSys : MonoBehaviour
         {
             return;
         }
+
         Vector3 curenPosition = this.transform.position;
         if (Input.GetKey("d"))
         {
