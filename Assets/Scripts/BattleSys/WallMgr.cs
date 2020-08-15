@@ -5,7 +5,7 @@ using UnityEngine;
 public class WallMgr : MonoBehaviour
 {
 
-    public List<WallItem> wallList = new List<WallItem>();
+    public List<WallItemSys> wallList = new List<WallItemSys>();
 
     public List<int> wallListRatio = new List<int>();
 
