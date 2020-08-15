@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    private Slot[] slots;
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+    public GameObject Inventory;
+    
 }
