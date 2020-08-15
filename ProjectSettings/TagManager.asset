@@ -8,6 +8,8 @@ TagManager:
   - Slot
   - GameRoot
   - Wall
+  - Inventory
+  - Ground
   layers:
   - Default
   - TransparentFX
