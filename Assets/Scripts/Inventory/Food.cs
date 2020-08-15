@@ -11,11 +11,72 @@ public class Food : MonoBehaviour,IPointerClickHandler
     private Inventory.FoodState State;
     public UnityEvent leftClick;
     private float time;
-     public void SetFood(int iD, Inventory.ItemQuality quality, Inventory.FoodState state)
+    public string intro="";
+     public void SetFood(int id, Inventory.ItemQuality quality, Inventory.FoodState state)
     {
-        ID = iD;
+        ID = id;
         this.Quality = quality;
         this.State = state;
+        //依据传入的参数选择物品说明
+        switch (id)
+        {
+            case 0:
+                switch (Quality)
+                    {
+                    case Inventory.ItemQuality.common:
+                        intro += "普通冰淇淋 3S内回复10HP";
+                        break;
+                    case Inventory.ItemQuality.rare:
+                        intro += "稀有冰淇淋 3S内回复20HP";
+                        break;
+                    case Inventory.ItemQuality.epic:
+                        intro += "至尊冰淇淋 3S内回复30HP";
+                        break;
+                    }
+                break;
+            case 1:
+                switch (Quality)
+                {
+                    case Inventory.ItemQuality.common:
+                        intro += "普通胡萝卜 3S内回复20HP";
+                        break;
+                    case Inventory.ItemQuality.rare:
+                        intro += "稀有胡萝卜 3S内回复30HP";
+                        break;
+                    case Inventory.ItemQuality.epic:
+                        intro += "至尊胡萝卜 3S内回复40HP";
+                        break;
+                }
+                break;
+            case 2:
+                switch (Quality)
+                {
+                    case Inventory.ItemQuality.common:
+                        intro += "普通饭团 3S内回复30HP";
+                        break;
+                    case Inventory.ItemQuality.rare:
+                        intro+= "稀有饭团 3S内回复40HP";
+                        break;
+                    case Inventory.ItemQuality.epic:
+                        intro += "至尊饭团 3S内回复50HP";
+                        break;
+                }
+                break;
+            case 3:
+                switch (Quality)
+                {
+                    case Inventory.ItemQuality.common:
+                        intro+= "普通鸡腿 3S内回复40HP";
+                        break;
+                    case Inventory.ItemQuality.rare:
+                        intro += "稀有鸡腿 3S内回复50HP";
+                        break;
+                    case Inventory.ItemQuality.epic:
+                        intro+= "至尊鸡腿 3S内回复60HP";
+                        break;
+                }
+                break;
+        }
     }
 
     void Start()
@@ -34,13 +95,14 @@ public class Food : MonoBehaviour,IPointerClickHandler
     {
         if (Time.time - time <= 0.3f)
         {
-            Use();
+            Use();//双击使用
         }
         time = Time.time;
     }
+    
     public void Use()
     {
-        print("ID:" + ID + "Quality:" + Quality + "State:" + State);
+        print(intro);
         print("food的Use事件");
     }
 }

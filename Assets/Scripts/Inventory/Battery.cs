@@ -13,13 +13,25 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     public UnityEvent leftClick;
     private float time;
     private Inventory.ItemQuality Quality;
+    public string intro="";
 
-    public void SetBattery(int iD, Inventory.ItemQuality quality)
+    public void SetBattery(int id, Inventory.ItemQuality quality)
     {
-        ID = iD;
+        ID = id;
         this.Quality = quality;
+        switch (Quality)
+        {
+            case Inventory.ItemQuality.common:
+                intro += "普通电池 立即回复电量30";
+                break;
+            case Inventory.ItemQuality.rare:
+                intro += "稀有电池 立即回复电量50";
+                break;
+            case Inventory.ItemQuality.epic:
+                intro += "至尊电池 立即回复电量70";
+                break;
+        }
     }
-
     void Start()
     {
         leftClick.AddListener(new UnityAction(DoubleLeftClick));

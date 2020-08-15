@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1815464477331952862
+--- !u!1 &1424137985170409809
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1815464477331952857}
-  - component: {fileID: 1815464477331952805}
-  - component: {fileID: 1815464477331952858}
-  - component: {fileID: 1815464477331952863}
-  - component: {fileID: 1815464477331952856}
+  - component: {fileID: 1424137985170409808}
+  - component: {fileID: 1424137985170409810}
+  - component: {fileID: 1424137985170409811}
+  - component: {fileID: 1695917524}
+  - component: {fileID: 4373548344423844841}
   m_Layer: 5
-  m_Name: Upgrade
+  m_Name: Food4
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1815464477331952857
+--- !u!224 &1424137985170409808
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815464477331952862}
+  m_GameObject: {fileID: 1424137985170409809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,38 +36,38 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: -110.439995}
-  m_SizeDelta: {x: 34.5, y: 34.5}
+  m_AnchoredPosition: {x: -4.05, y: 5.09}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1815464477331952805
+--- !u!222 &1424137985170409810
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815464477331952862}
+  m_GameObject: {fileID: 1424137985170409809}
   m_CullTransparentMesh: 0
---- !u!114 &1815464477331952858
+--- !u!114 &1424137985170409811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815464477331952862}
+  m_GameObject: {fileID: 1424137985170409809}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.017601825, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7e50a47a9d3fa7942b0a0c64622271c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,30 +76,34 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1815464477331952863
+--- !u!114 &1695917524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815464477331952862}
+  m_GameObject: {fileID: 1424137985170409809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f00311a2bb689049ab77d557f96712b, type: 3}
+  m_Script: {fileID: 11500000, guid: 897adf32d82ec9b47b65c2932ce98e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodPos: {x: 0, y: 0, z: 0}
+--- !u!114 &4373548344423844841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424137985170409809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4929340d6982cee45a3c1a5bf024dd88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
---- !u!114 &1815464477331952856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815464477331952862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f592f9cbeb421a49b12a4da6f1f6448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isNew: 1
+  leftClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

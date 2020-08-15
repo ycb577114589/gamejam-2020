@@ -7,18 +7,29 @@ using UnityEngine.UI;
 public class Drug : MonoBehaviour, IPointerClickHandler
 {
     public int ID;
-    private Inventory.ItemQuality Quality;
+    public string intro="";
 
     public UnityEvent leftClick;
     private float time;
 
-    public void SetDrug(int iD, Inventory.ItemQuality quality)
+    public void SetDrug(int id)
     {
-        ID = iD;
-        this.Quality = quality;
+        ID = id;
+        switch (id)
+        {
+            case 0:
+                intro += "小药丸 立即回复30HP";
+                break;
+            case 1:
+                intro += "药瓶 立即回复40HP";
+                break;
+            case 2:
+                intro += "大药箱 立即回复50HP";
+                break;
+        }
     }
 
-    void Start()
+        void Start()
     {
         leftClick.AddListener(new UnityAction(DoubleLeftClick));
         time = Time.time;
@@ -40,6 +51,7 @@ public class Drug : MonoBehaviour, IPointerClickHandler
     }
     public void Use()
     {
+        print(intro);
         print("drug的Use事件");
     }
 }

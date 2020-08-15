@@ -40,7 +40,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             if(isNew==true)
             {
-                Inventory iv = GameObject.Find("Inventory").GetComponent<Inventory>();
+                Inventory iv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
                 iv.panelShow = false;
             }
             //直接放上去
@@ -58,7 +58,6 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 target.SetParent(transform.parent);
                 transform.position = target.transform.position;
                 target.transform.position = beginPos;
-
             }
             //若是从窗口页面上拖拽下来的， 则丢弃之前的物品
             else if (isNew == true)

@@ -39,7 +39,7 @@ public class ItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             {
             if (isNew == true)
             {
-                Inventory iv = GameObject.Find("Inventory").GetComponent<Inventory>();
+                Inventory iv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
                 iv.panelShow = false;
             }
 
