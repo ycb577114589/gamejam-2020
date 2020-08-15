@@ -4034,7 +4034,6 @@ MonoBehaviour:
   - {fileID: 4120515296216068822, guid: dc41202f3c7e3a54081b819f387d6113, type: 3}
   - {fileID: 6869499136087821084, guid: 39fc2af9ba067b5488e21a5e70207ac0, type: 3}
   - {fileID: 1352136541691313287, guid: f1903ec11bbdc014492973dbfae2cf6e, type: 3}
-  curWeapon: {fileID: 0}
 --- !u!1 &1906079737
 GameObject:
   m_ObjectHideFlags: 0
