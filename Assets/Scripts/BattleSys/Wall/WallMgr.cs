@@ -9,6 +9,8 @@ public class WallMgr : MonoBehaviour
 
     public List<int> wallListRatio = new List<int>();
 
+
+
     public float refreshTime = 1;
     private float currentTime = 0;
     // Start is called before the first frame update
