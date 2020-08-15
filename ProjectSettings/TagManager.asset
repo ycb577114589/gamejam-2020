@@ -7,6 +7,7 @@ TagManager:
   - GameRoot
   - Slot
   - Wall
+  - Weapon
   layers:
   - Default
   - TransparentFX

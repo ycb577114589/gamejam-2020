@@ -19,7 +19,6 @@ public class PlayerMoveSys : MonoBehaviour
     Vector3 moveTowardPosition = Vector3.zero;
     Vector3 moveDirection = Vector3.zero;
 
-    float speed = 1;
     void FixedUpdate()
     {
         if (!GameRoot.Instance.CanContinueTimer)
@@ -30,23 +29,23 @@ public class PlayerMoveSys : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.position = transform.position + new Vector3(1.0f, 0, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, -0, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 270);
         }
         else if (Input.GetKey("s"))
         {
             transform.position = transform.position + new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, -0, -90);
+            transform.rotation = Quaternion.Euler(0, 0, 180);
 
         }
         else if (Input.GetKey("a"))
         {
             transform.position = transform.position + new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, -180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (Input.GetKey("w"))
         {
             transform.position = transform.position + new Vector3(0.0f, 1.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, -0, 90);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 } 

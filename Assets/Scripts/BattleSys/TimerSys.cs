@@ -26,7 +26,7 @@ public class TimerSys : MonoBehaviour
         }
         if (currentTime <= 0)
         {
-            GameRoot.Instance.CanContinueTimer = false;
+            //GameRoot.Instance.CanContinueTimer = false;
             if (bMorning)
             {
                 bMorning = false;
