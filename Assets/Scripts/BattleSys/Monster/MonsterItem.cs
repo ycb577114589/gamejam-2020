@@ -79,6 +79,14 @@ public class MonsterItem : MonoBehaviour
                 playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
             return;
         }
+        if (dir.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 180f, 0);
+        }
         if (isWalk)
         {
             //运动: anim.play("run")
