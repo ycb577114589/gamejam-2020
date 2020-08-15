@@ -19,6 +19,10 @@ public class MonoRoot : MonoBehaviour
     { 
 
     } 
+    public void BeginScene()
+    {
+        SceneMgr.Instance.LoadScene("Scene1");
+    }
 }
 
 public class GameRoot
