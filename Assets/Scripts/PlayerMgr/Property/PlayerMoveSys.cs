@@ -9,6 +9,7 @@ public class PlayerMoveSys : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     [SerializeField]
     private float moveSpeed = 5.0f;
+    public Transform weapon = null;
 
     void Start()
     {
@@ -30,23 +31,23 @@ public class PlayerMoveSys : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.position = transform.position + new Vector3(1.0f, 0, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, 0, 270);
+            weapon.rotation = Quaternion.Euler(0, 0, 270);
         }
         else if (Input.GetKey("s"))
         {
             transform.position = transform.position + new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, 0, 180);
+            weapon.rotation = Quaternion.Euler(0, 0, 180);
 
         }
         else if (Input.GetKey("a"))
         {
             transform.position = transform.position + new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, 0, 90);
+            weapon.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (Input.GetKey("w"))
         {
             transform.position = transform.position + new Vector3(0.0f, 1.0f, 0.0f) * moveSpeed;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            weapon.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 } 

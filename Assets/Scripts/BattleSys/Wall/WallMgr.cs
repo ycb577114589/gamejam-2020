@@ -152,7 +152,7 @@ public class WallMgr : MonoBehaviour
     public List<GameObject> others = new List<GameObject>();
     public List<int> othersRatio = new List<int>();
 
-
+    public List<int> levelRatio = new List<int>();
 
 
 }
