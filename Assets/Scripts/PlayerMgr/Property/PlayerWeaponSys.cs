@@ -49,10 +49,11 @@ public class PlayerWeaponSys : MonoBehaviour
             curWeapon.SetActive(false);
         }
     }
+    public Transform weapon;
     private void Start()
     {
         //curWeapon = GameObject.FindGameObjectWithTag("Weapon");
-        curWeapon.transform.SetParent(transform);
+        curWeapon.transform.SetParent(weapon);
     }
     void ChangeWeapon()
     {
@@ -68,10 +69,10 @@ public class PlayerWeaponSys : MonoBehaviour
                 switch(buffWidth)
                 {
                     case 0:
-                        curWeapon=GameObject.Instantiate(weapons[0], temp, Quaternion.identity, transform);
+                        curWeapon=GameObject.Instantiate(weapons[0], temp, Quaternion.identity, weapon);
                         break;
                     case 1:
-                        curWeapon = GameObject.Instantiate(weapons[3], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[3], temp, Quaternion.identity, weapon);
                         break;
                 }
                 break;
@@ -79,10 +80,10 @@ public class PlayerWeaponSys : MonoBehaviour
                 switch (buffWidth)
                 {
                     case 0:
-                        curWeapon = GameObject.Instantiate(weapons[1], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[1], temp, Quaternion.identity, weapon);
                         break;
                     case 1:
-                        curWeapon = GameObject.Instantiate(weapons[4], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[4], temp, Quaternion.identity, weapon);
                         break;
                 }
                 break;
@@ -90,10 +91,10 @@ public class PlayerWeaponSys : MonoBehaviour
                 switch (buffWidth)
                 {
                     case 0:
-                        curWeapon = GameObject.Instantiate(weapons[2], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[2], temp, Quaternion.identity, weapon);
                         break;
                     case 2:
-                        curWeapon = GameObject.Instantiate(weapons[5], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[5], temp, Quaternion.identity, weapon);
                         break;
                 }
                 break;

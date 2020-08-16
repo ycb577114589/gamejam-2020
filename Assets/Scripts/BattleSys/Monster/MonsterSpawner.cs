@@ -32,6 +32,7 @@ public class MonsterSpawner : MonoBehaviour
         mType2Number = type2Number;
         bStart = true;
     }
+
     private void Update()
     {
         currentTimer -= Time.deltaTime;
@@ -55,4 +56,3 @@ public class MonsterSpawner : MonoBehaviour
         }
     }
 }
-

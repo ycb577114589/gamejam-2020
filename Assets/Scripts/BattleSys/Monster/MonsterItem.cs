@@ -17,6 +17,7 @@ public class MonsterItem : MonoBehaviour
         {
             currentHp -= playerWeapon.Damage;
             hp.value = currentHp * 1.0f / MaxHp;
+            Debug.LogError(hp.value);
             if (currentHp <= 0)
                 this.gameObject.SetActive(false);
         } 
@@ -88,7 +89,6 @@ public class MonsterItem : MonoBehaviour
             }
             if(dis <= attackDistance && currentAttackTime<=0)
             {
-                //Anim.Play("Attack");
                 currentAttackTime = attackRefreshTime;
                 if (playerProperty != null)
                     playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);

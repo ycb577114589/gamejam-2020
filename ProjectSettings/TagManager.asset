@@ -13,6 +13,7 @@ TagManager:
   - Box
   - Weapon
   - Food
+  - DeltaPos
   layers:
   - Default
   - TransparentFX

@@ -33,6 +33,8 @@ public class Upgrade : MonoBehaviour
     }
     private void Update()
     {
+        if (gameObject.transform.parent == null)
+            return;
         if(gameObject.transform.parent.tag=="Slot")
         {//装备上
             if(buff==false)
