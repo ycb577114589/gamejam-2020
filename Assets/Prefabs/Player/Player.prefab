@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 1539672573924541166}
   - component: {fileID: 1539672573924541152}
   - component: {fileID: 1539672573924541153}
-  - component: {fileID: 1539672573924541155}
   - component: {fileID: 3836054985823876980}
   - component: {fileID: 3836054985823876983}
   - component: {fileID: 3836054985823876981}
@@ -156,25 +155,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!95 &1539672573924541155
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539672573924541167}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c6ec7d7f0451b84eb8e9b743330c9b1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &3836054985823876980
 Rigidbody2D:
   serializedVersion: 4
@@ -236,7 +216,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   weapon: {fileID: 8561605013457754316}
-  weaponIcon: {fileID: 1539672572464398353}
+  up: {fileID: 0}
+  down: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &3836054985823876982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e30dbecb58f02d459736776a540097d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadPanel: {fileID: 0}
+  deadMessage: {fileID: 0}
+  timerSys: {fileID: 0}
   mPropertyValueMax:
   - 100
   - 100
@@ -280,6 +267,7 @@ MonoBehaviour:
   - {fileID: 4120515296216068822, guid: dc41202f3c7e3a54081b819f387d6113, type: 3}
   - {fileID: 6869499136087821084, guid: 39fc2af9ba067b5488e21a5e70207ac0, type: 3}
   - {fileID: 1352136541691313287, guid: f1903ec11bbdc014492973dbfae2cf6e, type: 3}
+  curWeapon: {fileID: 0}
   playerMove: {fileID: 3836054985823876981}
   playerProperty: {fileID: 3836054985823876982}
   showTime: 0.5
