@@ -12,6 +12,7 @@ public class Drug : MonoBehaviour, IPointerClickHandler
     public UnityEvent leftClick;
     private float time;
     public PlayerPropertySys playerProperty;
+    public GameObject Introduction;
 
     int hp = 0;
     public void SetDrug(int id)
@@ -54,6 +55,9 @@ public class Drug : MonoBehaviour, IPointerClickHandler
     }
     public void DoubleLeftClick()
     {
+        GameObject go = GameObject.Instantiate(Introduction, Input.mousePosition, Quaternion.identity, transform);
+        go.GetComponentInChildren<Text>().text = intro;
+        Destroy(go, 2);
         if (Time.time - time <= 0.3f)
         {
             Use();

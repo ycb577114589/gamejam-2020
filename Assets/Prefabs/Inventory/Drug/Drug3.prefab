@@ -96,6 +96,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  playerProperty: {fileID: 0}
+  Introduction: {fileID: 7596637607413879148, guid: 8f74b335612eb594cbccc716284b03c0,
+    type: 3}
 --- !u!114 &7808095614569895934
 MonoBehaviour:
   m_ObjectHideFlags: 0

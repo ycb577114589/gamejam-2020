@@ -14,6 +14,8 @@ public class Food : MonoBehaviour,IPointerClickHandler
     public string intro="";
     public PlayerPropertySys playerProperty;
 
+    public GameObject Introduction;
+
     int hp = 0;
     float hpRiseTime = 0;
 
@@ -129,6 +131,11 @@ public class Food : MonoBehaviour,IPointerClickHandler
     }
     public void DoubleLeftClick()
     {
+
+        GameObject go= GameObject.Instantiate(Introduction, Input.mousePosition, Quaternion.identity,transform);
+        go.GetComponentInChildren<Text>().text = intro;
+        Destroy(go, 2);
+
         if (Time.time - time <= 0.3f)
         {
             Use();//双击使用
@@ -138,9 +145,9 @@ public class Food : MonoBehaviour,IPointerClickHandler
     
     public void Use()
     {
-        print(intro);
         print("food的Use事件");
         playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, hp, hpRiseTime);
         Destroy(gameObject);
     }
+    
 }

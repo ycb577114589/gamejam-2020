@@ -110,6 +110,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   intro: 
   playerProperty: {fileID: 0}
+  Introduction: {fileID: 7596637607413879148, guid: 8f74b335612eb594cbccc716284b03c0,
+    type: 3}
+  introtext: {fileID: 0}
 --- !u!114 &1993114619336302894
 MonoBehaviour:
   m_ObjectHideFlags: 0

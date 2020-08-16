@@ -14,6 +14,7 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     private float time;
     private Inventory.ItemQuality Quality;
     public string intro="";
+    public GameObject Introduction;
 
     public PlayerPropertySys playerProperty;
     public int mp = 0;
@@ -57,6 +58,9 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     }
     public void DoubleLeftClick()
     {
+        GameObject go = GameObject.Instantiate(Introduction, Input.mousePosition, Quaternion.identity, transform);
+        go.GetComponentInChildren<Text>().text = intro;
+        Destroy(go, 2);
         if (Time.time - time <= 0.3f)
         {
             Use();

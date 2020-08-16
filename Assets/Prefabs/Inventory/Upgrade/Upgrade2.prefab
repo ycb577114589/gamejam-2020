@@ -90,6 +90,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intro: 
+  leftClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Introduction: {fileID: 7596637607413879148, guid: 8f74b335612eb594cbccc716284b03c0,
+    type: 3}
 --- !u!114 &1815464477331952856
 MonoBehaviour:
   m_ObjectHideFlags: 0
