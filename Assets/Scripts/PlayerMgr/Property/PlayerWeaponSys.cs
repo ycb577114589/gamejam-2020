@@ -12,6 +12,7 @@ public class PlayerWeaponSys : MonoBehaviour
     public GameObject[] weapons;
     private GameObject curWeapon;
 
+    public PlayerMoveSys playerMove = null;
     public void ResetWeaponDamage(int damage)
     {
         mDamage = damage;
@@ -24,6 +25,21 @@ public class PlayerWeaponSys : MonoBehaviour
         }
     }
 
+    public float showTime = 0.5f;
+    private float currenTime = 0f;
+    public void UseWeapon()
+    {
+        currenTime = showTime;
+        curWeapon.SetActive(true);
+    }
+    private void Update()
+    {
+        currenTime -= Time.deltaTime;
+        if (currenTime <= 0)
+        {
+            curWeapon.SetActive(false);
+        }
+    }
     private void Start()
     {
         curWeapon = GameObject.FindGameObjectWithTag("Weapon");
@@ -31,19 +47,22 @@ public class PlayerWeaponSys : MonoBehaviour
     }
     void ChangeWeapon()
     {
-        Vector3 temp;
+        Vector3 temp = curWeapon.transform.position; ;
+        if (curWeapon != null)
+        {
+            Destroy(curWeapon);
+            curWeapon = null;
+        }
         switch (buffLength)
         {
             case 0:
                 switch(buffWidth)
                 {
                     case 0:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[0], temp, Quaternion.identity, transform);
+                        curWeapon=GameObject.Instantiate(weapons[0], temp, Quaternion.identity, transform);
                         break;
                     case 1:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[3], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[3], temp, Quaternion.identity, transform);
                         break;
                 }
                 break;
@@ -51,12 +70,10 @@ public class PlayerWeaponSys : MonoBehaviour
                 switch (buffWidth)
                 {
                     case 0:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[1], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[1], temp, Quaternion.identity, transform);
                         break;
                     case 1:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[4], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[4], temp, Quaternion.identity, transform);
                         break;
                 }
                 break;
@@ -64,16 +81,15 @@ public class PlayerWeaponSys : MonoBehaviour
                 switch (buffWidth)
                 {
                     case 0:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[2], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[2], temp, Quaternion.identity, transform);
                         break;
                     case 2:
-                        temp = curWeapon.transform.position;
-                        GameObject.Instantiate(weapons[5], temp, Quaternion.identity, transform);
+                        curWeapon = GameObject.Instantiate(weapons[5], temp, Quaternion.identity, transform);
                         break;
                 }
                 break;
         }
+        playerMove.weapon = curWeapon.transform;
     }
 
     public void AddLength()

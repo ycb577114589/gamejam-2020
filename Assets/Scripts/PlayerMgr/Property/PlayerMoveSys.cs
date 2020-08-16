@@ -15,7 +15,6 @@ public class PlayerMoveSys : MonoBehaviour
     {
 
         m_Rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-
     }
     Vector3 moveTowardPosition = Vector3.zero;
     Vector3 moveDirection = Vector3.zero;
