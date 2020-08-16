@@ -24,7 +24,7 @@ public class NightSys : MonoBehaviour
             GameObject item = mMontserSys.allDoor[i].gameObject;
             for (int f = 0; f < item.transform.childCount; f++)
             {
-                Destroy(item.transform.GetChild(0).gameObject);
+                Destroy(item.transform.GetChild(f).gameObject);
             }
             mMontserSys.Reset();
             //int childCount = transform.childCount;

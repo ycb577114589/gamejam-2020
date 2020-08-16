@@ -17,7 +17,6 @@ public class MonsterSpawner : MonoBehaviour
 
     public float refreshTimer = 3f;
     private float currentTimer = 0f;
-    // Start is called before the first frame update
     void Start()
     {
         currentTimer = refreshTimer;
