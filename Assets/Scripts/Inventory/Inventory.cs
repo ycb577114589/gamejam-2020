@@ -86,7 +86,7 @@ public class Inventory : MonoBehaviour
                 introducrion.text = ud.intro;
                 break;
             case ItemType.other:
-                go= GameObject.Instantiate(upgrade[ID], transform.position, Quaternion.identity, this.transform);
+                go= GameObject.Instantiate(other[ID], transform.position, Quaternion.identity, this.transform);
                 Other ot = go.GetComponent<Other>();
                 ot.SetOther(ID);
                 introducrion.text = ot.intro;
