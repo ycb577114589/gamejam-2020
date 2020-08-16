@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 569791146854655878}
   - component: {fileID: 8208867320556918098}
   - component: {fileID: 3992201100844256727}
+  - component: {fileID: 778916340996912126}
   m_Layer: 8
   m_Name: Monster_Base
   m_TagString: Untagged
@@ -230,7 +231,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 30375b5475d8ab743bfa305332644356, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ca4d627edf2a3842848bb73d00a19e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -308,6 +309,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!95 &778916340996912126
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619919562328067650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cca03b8af41732541939afc4a6386cdc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5128881314308375668
 GameObject:
   m_ObjectHideFlags: 0

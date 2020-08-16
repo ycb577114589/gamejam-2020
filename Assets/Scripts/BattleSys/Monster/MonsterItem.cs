@@ -10,8 +10,7 @@ public class MonsterItem : MonoBehaviour
     private int currentHp = 0;
     public Slider hp = null;
     private PlayerPropertySys playerProperty = null;
-    private PlayerWeaponSys playerWeapon = null; 
-
+    private PlayerWeaponSys playerWeapon = null;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Weapon")
@@ -55,8 +54,8 @@ public class MonsterItem : MonoBehaviour
         }
 
         dir = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);//给游戏物体一个初始方向，让它去撞击边界触发器
-        //Anim = GetComponent<Animator>();
-        //Anim.Play("run");
+        Anim = GetComponent<Animator>();
+        Anim.Play("mayiWalk");
         time = 0;
         isWalk = true;
     }
@@ -106,7 +105,8 @@ public class MonsterItem : MonoBehaviour
         }
         if (isWalk)
         {
-            //运动: anim.play("run")
+            //运动: 
+            Anim.Play("mayiWalk");
             transform.localPosition += dir.normalized * speed * Time.deltaTime;
         }
         else
