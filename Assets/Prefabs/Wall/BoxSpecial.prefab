@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 48, y: 48}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6915183970708991907
 CanvasRenderer:
@@ -101,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 40}
+  m_Size: {x: 65, y: 65}
   m_EdgeRadius: 5
 --- !u!114 &8809698356822999096
 MonoBehaviour:
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d2d84955dc0db48a4b2726ec094598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myContent: {fileID: 0}
 --- !u!50 &7083968166820632210
 Rigidbody2D:
   serializedVersion: 4
