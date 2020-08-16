@@ -87,6 +87,7 @@ public class WallMgr : MonoBehaviour
                     {
                         inventory.quality = ItemQuality.rare;
                     }
+
                     wallList[chooseItem].SetThing = createObj;
 
                     if (bCurrentChooseBase)
@@ -149,10 +150,18 @@ public class WallMgr : MonoBehaviour
             int itemId = RandomBase(BatteryRatio);
             return battery[itemId];
         }
-        if (switchId == 3 &&others.Count >0)
+        if (bCurrentChooseBase==false)
         {
-            int itemId = RandomBase(othersRatio);
-            return others[itemId];
+            if (switchId == 3)
+            {
+                int itemId = RandomBase(updateRatio);
+                return update[itemId];
+            }
+            if (switchId == 4 && others.Count > 0)
+            {
+                int itemId = RandomBase(othersRatio);
+                return others[itemId];
+            }
         }
         return null;
     }
@@ -172,6 +181,9 @@ public class WallMgr : MonoBehaviour
 
     public List<GameObject> battery = new List<GameObject>();
     public List<int> BatteryRatio = new List<int>();
+
+    public List<GameObject> update = new List<GameObject>();
+    public List<int> updateRatio = new List<int>();
 
     public List<GameObject> others = new List<GameObject>();
     public List<int> othersRatio = new List<int>();

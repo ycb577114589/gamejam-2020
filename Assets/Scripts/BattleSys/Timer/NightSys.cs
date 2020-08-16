@@ -21,17 +21,12 @@ public class NightSys : MonoBehaviour
     {
         for (int i = 0; i < mMontserSys.allDoor.Count; i++)
         {
-            int count = mMontserSys.mRefreshMonsterToday.listMonsterDoorsItem.Count;
-            for (int j = 0; j < count; j++)
+            GameObject item = mMontserSys.allDoor[i].gameObject;
+            for (int f = 0; f < item.transform.childCount; f++)
             {
-                GameObject item = mMontserSys.mRefreshMonsterToday.listMonsterDoorsItem[j].gameObject;
-
-                for (int f = 0; f < item.transform.childCount; f++)
-                {
-                    Destroy(item.transform.GetChild(0).gameObject);
-                }
-                mMontserSys.Reset();
+                Destroy(item.transform.GetChild(0).gameObject);
             }
+            mMontserSys.Reset();
             //int childCount = transform.childCount;
             //for (int j = 0; j < childCount; j++)
             //{
