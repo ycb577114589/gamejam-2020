@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6639372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 224474975}
   - component: {fileID: 224474973}
   - component: {fileID: 224474974}
+  - component: {fileID: 224474977}
   m_Layer: 5
   m_Name: Wall2
   m_TagString: Untagged
@@ -598,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104, y: -20}
+  m_AnchoredPosition: {x: 101, y: -76}
   m_SizeDelta: {x: 562.4, y: 437.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224474973
@@ -633,7 +634,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224474971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -667,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6132076, g: 0.26321647, b: 0.26321647, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -691,6 +692,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224474971}
   m_CullTransparentMesh: 0
+--- !u!95 &224474977
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224474971}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &224539386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1466,8 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669907}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1518,6 +1540,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &534669906
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &534669907
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114726971179423386, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 534669906}
+  - key: {fileID: 114500524420852658, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 971077299}
+  - key: {fileID: 114955497872317242, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 1101325023}
+  - key: {fileID: 114961647342426050, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 552016449}
+  - key: {fileID: 114234792451668314, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 1183455310}
+  - key: {fileID: 114803912474157152, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+    value: {fileID: 224474977}
+  - key: {fileID: 114063056317112406, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+    value: {fileID: 1101325023}
+  - key: {fileID: 114278228598022808, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+    value: {fileID: 971077299}
+  - key: {fileID: 114748623036830680, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+    value: {fileID: 552016449}
+  - key: {fileID: 114343993943090154, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+    value: {fileID: 1183455310}
+  - key: {fileID: 114025104114514784, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+    value: {fileID: 224474977}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &552016445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1609,7 @@ GameObject:
   - component: {fileID: 552016446}
   - component: {fileID: 552016448}
   - component: {fileID: 552016447}
+  - component: {fileID: 552016449}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -1592,6 +1673,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552016445}
   m_CullTransparentMesh: 0
+--- !u!95 &552016449
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552016445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &579767958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971077300}
   - component: {fileID: 971077301}
+  - component: {fileID: 971077302}
   m_Layer: 5
   m_Name: Morning
   m_TagString: Untagged
@@ -2312,6 +2413,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mWallMgr: {fileID: 604976491}
+--- !u!95 &971077302
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971077299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &979893915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,6 +3075,7 @@ GameObject:
   - component: {fileID: 1183455307}
   - component: {fileID: 1183455309}
   - component: {fileID: 1183455306}
+  - component: {fileID: 1183455310}
   m_Layer: 5
   m_Name: Wall1
   m_TagString: Untagged
@@ -3038,7 +3159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6132076, g: 0.26321647, b: 0.26321647, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3089,6 +3210,25 @@ MonoBehaviour:
   - {fileID: 1717431596}
   itemSlotRatio: 1e0000001e00000028000000000000000000000000000000000000009001000000000000000000000000000028000000
   thing: {fileID: 0}
+--- !u!95 &1183455310
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183455304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1242712006
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,6 +3397,9 @@ MonoBehaviour:
   currentDay: 1
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}
+  director: {fileID: 534669907}
+  dayToNight: {fileID: 11400000, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
+  nightToDay: {fileID: 11400000, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
 --- !u!1 &1287896548
 GameObject:
   m_ObjectHideFlags: 0
