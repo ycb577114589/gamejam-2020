@@ -14,6 +14,8 @@ public class TimerSys : MonoBehaviour
     public GameObject morning = null;
     public GameObject night = null;
 
+    public bool isDay;
+
     //增加的三个物体，分别是播放组件，白天到黑夜的切换动画，黑夜到白天的切换动画
     public PlayableDirector director;
     public PlayableAsset dayToNight;
@@ -24,6 +26,7 @@ public class TimerSys : MonoBehaviour
     {
         director = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayableDirector>();
         RefreshTime(true);
+        isDay = true;
     }
     
     void Update()
@@ -45,6 +48,7 @@ public class TimerSys : MonoBehaviour
 
                 director.playableAsset = dayToNight;//白天到黑夜切换
                 director.Play();
+                isDay = false;
 
                 bMorning = false;
                 morning.GetComponent<MorningSys>().MorningOver();
@@ -58,6 +62,7 @@ public class TimerSys : MonoBehaviour
             {
                 director.playableAsset = nightToDay;//黑夜到白天切换
                 director.Play();
+                isDay = true;
 
                 currentDay++;
                 bMorning = true;
@@ -70,7 +75,7 @@ public class TimerSys : MonoBehaviour
             }
             if (currentDay > maxDay)
             {
-                Debug.LogError("success");
+               
             }
         }
     }

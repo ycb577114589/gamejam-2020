@@ -63,6 +63,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             else if (isNew == true)
             {
                 transform.position = target.transform.position;
+                originParent.GetComponent<Inventory>().panelShow = false;
                 Destroy(target.gameObject);
             }
             transform.SetParent(target.parent.transform);
@@ -74,7 +75,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             transform.position = Input.mousePosition;
             FoodPos = transform.position;
 
-            Destroy(transform.gameObject, 2);
+            Destroy(transform.gameObject, 3);
             
             print(FoodPos);
 

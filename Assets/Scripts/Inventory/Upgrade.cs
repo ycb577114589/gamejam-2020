@@ -20,10 +20,10 @@ public class Upgrade : MonoBehaviour
         switch (id)
         {
             case 0:
-                intro += "光线长度升级 手电光线长度变得更长";
+                intro += "光线长度升级 更长光线";
                 break;
             case 1:
-                intro += "光线宽度升级 手电光线宽度变得更宽";
+                intro += "光线宽度升级 更宽范围";
                 break;
         }
     }

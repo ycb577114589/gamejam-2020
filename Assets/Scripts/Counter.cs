@@ -12,6 +12,14 @@ public class Counter : MonoBehaviour
     }
     void Update()
     {
-        counter.text = "第"+timerSys.currentDay+"天 "+"距离天黑/亮还有"+(int)timerSys.currentTime+"秒";
+        if(timerSys.isDay==true)
+        {
+            counter.text = "第" + timerSys.currentDay + "天 " + "距离天黑还有" + (int)timerSys.currentTime + "秒";
+        }
+        if(timerSys.isDay==false)
+        {
+            counter.text = "第" + timerSys.currentDay + "天 " + "距离天亮还有" + (int)timerSys.currentTime + "秒";
+        }
+        
     }
 }

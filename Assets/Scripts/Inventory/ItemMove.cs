@@ -64,6 +64,7 @@ public class ItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 else if(isNew==true)
                 {
                     transform.position = target.transform.position;
+                    originParent.GetComponent<Inventory>().panelShow = false;
                     Destroy(target.gameObject);
                 }
                 transform.SetParent(target.parent.transform);
