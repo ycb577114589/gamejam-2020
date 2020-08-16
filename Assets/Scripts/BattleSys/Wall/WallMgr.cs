@@ -35,8 +35,7 @@ public class WallMgr : MonoBehaviour
 
         if (currentTime <= 0)
         {
-            System.Random ra = new System.Random();
-            int rd = ra.Next(0, 100);
+            int rd = UnityEngine.Random.Range(0, 100);
             int cnt = 0;
             int chooseItem = -1;
             for (int i = 0; i < wallList.Count; i++)
@@ -104,15 +103,19 @@ public class WallMgr : MonoBehaviour
             currentTime = refreshTime;
         }
     }
-    public int RandomBase(List<int> radios)
+    public int RandomBase(List<int> radios,bool debug = false)
     {
-        System.Random ra = new System.Random((int)DateTime.Now.ToFileTimeUtc());
-        var rd = ra.Next(0, 100);
+
+        int rd = UnityEngine.Random.Range(0, 100);
+        //System.Random ra = new System.Random((int)DateTime.Now.ToFileTimeUtc());
+        //int rd = ra.Next(0, 100);
         int cnt = 0;
-        int switchId = 0;
+        int switchId = 0; 
+
         for (int i = 0; i < radios.Count; i++)
         {
             cnt += radios[i];
+            
             if (rd <= cnt)
             {
                 switchId = i;
@@ -159,7 +162,7 @@ public class WallMgr : MonoBehaviour
             }
             if (switchId == 4 && others.Count > 0)
             {
-                int itemId = RandomBase(othersRatio);
+                int itemId = RandomBase(othersRatio,true);
                 return others[itemId];
             }
         }
