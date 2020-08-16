@@ -71,18 +71,31 @@ public class MonsterItem : MonoBehaviour
         }
         time += Time.deltaTime;//定时
         currentAttackTime -= Time.deltaTime;
-        int dis =(int) (transform.position - player.transform.position).sqrMagnitude;
-        if (currentAttackTime > 0)
+        GameObject food = GameObject.FindWithTag("Food");
+        if (food != null)
         {
-            return;
+            int dis = (int)(transform.position - food.transform.position).sqrMagnitude;
+            if (dis <= attackDistance)
+            {
+                return;
+            }
         }
-        if(dis<= attackDistance&&currentAttackTime<=0)
+        else
         {
-            currentAttackTime = attackRefreshTime;
-            if (playerProperty != null)
-                playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
-            return;
+            int dis =(int) (transform.position - player.transform.position).sqrMagnitude;
+            if (currentAttackTime > 0)
+            {
+                return;
+            }
+            if(dis<= attackDistance&&currentAttackTime<=0)
+            {
+                currentAttackTime = attackRefreshTime;
+                if (playerProperty != null)
+                    playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
+                return;
+            }
         }
+
         if (dir.x < 0)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);

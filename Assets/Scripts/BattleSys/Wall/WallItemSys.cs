@@ -14,6 +14,7 @@ public class WallItemSys : MonoBehaviour
 
     private int activeNumber = 0;
 
+    bool bWork = true;
     public GameObject thing = null;
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,16 @@ public class WallItemSys : MonoBehaviour
         {
             bActive[i] = false;
         }
+        bWork = false;
+    }
+    public void ReBegin()
+    {
+        bWork = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if (GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel)
+        if (GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel ||!bWork)
         {
             return;
         }

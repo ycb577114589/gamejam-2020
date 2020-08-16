@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6639372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 101, y: -76}
+  m_AnchoredPosition: {x: 101, y: -23}
   m_SizeDelta: {x: 562.4, y: 437.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224474973
@@ -1026,28 +1026,132 @@ MonoBehaviour:
   Monster2: {fileID: 4619919562328067650, guid: b95f9ecff73dbef409c0758633bbf4b5,
     type: 3}
   listRefreshMonsterOneDay:
-  - monsterCreateNumber: 2
+  - monsterCreateNumber: 6
     refreshTime: 10
     listMonsterDoorsItem:
     - {fileID: 1479588794}
     - {fileID: 235829013}
-    listMonsterType1RefreshNumber: 0300000003000000
-    listMonsterType2RefreshNumber: 0300000003000000
-    listMonsterType1RefreshRatio: 6400000000000000
-    listMonsterType2RefreshRatio: 6400000064000000
-  - monsterCreateNumber: 1
-    refreshTime: 1
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    listMonsterType1RefreshNumber: 070000000700000008000000080000000900000009000000
+    listMonsterType2RefreshNumber: 010000000100000002000000020000000300000003000000
+    listMonsterType1RefreshRatio: 320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 320000003200000032000000320000003200000032000000
+  - monsterCreateNumber: 7
+    refreshTime: 8.57
     listMonsterDoorsItem:
     - {fileID: 1479588794}
-    listMonsterType1RefreshNumber: 0a000000
-    listMonsterType2RefreshNumber: 0a000000
-    listMonsterType1RefreshRatio: 64000000
-    listMonsterType2RefreshRatio: 64000000
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    listMonsterType1RefreshNumber: 06000000060000000700000007000000070000000800000008000000
+    listMonsterType2RefreshNumber: 02000000020000000300000003000000030000000400000004000000
+    listMonsterType1RefreshRatio: 32000000320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 64000000640000006400000064000000640000006400000064000000
+  - monsterCreateNumber: 8
+    refreshTime: 7.5
+    listMonsterDoorsItem:
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    listMonsterType1RefreshNumber: 0500000005000000060000000600000006000000060000000700000007000000
+    listMonsterType2RefreshNumber: 0300000003000000030000000400000004000000050000000500000005000000
+    listMonsterType1RefreshRatio: 3200000032000000320000003200000032000000320000003200000064000000
+    listMonsterType2RefreshRatio: 3200000032000000320000003200000032000000320000003200000032000000
+  - monsterCreateNumber: 9
+    refreshTime: 6.66
+    listMonsterDoorsItem:
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    listMonsterType1RefreshNumber: 040000000400000004000000050000000500000005000000060000000600000006000000
+    listMonsterType2RefreshNumber: 040000000400000004000000050000000500000005000000060000000600000006000000
+    listMonsterType1RefreshRatio: 320000003200000032000000320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 320000003200000032000000320000003200000032000000320000003200000032000000
+  - monsterCreateNumber: 10
+    refreshTime: 6
+    listMonsterDoorsItem:
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    listMonsterType1RefreshNumber: 03000000030000000300000004000000040000000400000004000000050000000500000005000000
+    listMonsterType2RefreshNumber: 05000000050000000500000006000000060000000600000006000000070000000700000007000000
+    listMonsterType1RefreshRatio: 32000000320000003200000032000000320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 32000000320000003200000032000000320000003200000032000000320000003200000032000000
+  - monsterCreateNumber: 11
+    refreshTime: 5.45
+    listMonsterDoorsItem:
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    listMonsterType1RefreshNumber: 0200000002000000020000000200000003000000030000000300000004000000040000000400000004000000
+    listMonsterType2RefreshNumber: 0600000006000000060000000600000007000000070000000700000008000000080000000800000008000000
+    listMonsterType1RefreshRatio: 3200000032000000320000003200000032000000320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 3200000032000000320000003200000032000000320000003200000032000000320000003200000032000000
+  - monsterCreateNumber: 12
+    refreshTime: 2
+    listMonsterDoorsItem:
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    - {fileID: 235829013}
+    - {fileID: 235829013}
+    - {fileID: 1479588794}
+    listMonsterType1RefreshNumber: 010000000100000001000000010000000200000002000000020000000200000003000000030000000300000003000000
+    listMonsterType2RefreshNumber: 070000000700000007000000070000000800000008000000080000000800000009000000090000000900000009000000
+    listMonsterType1RefreshRatio: 320000003200000032000000320000003200000032000000320000003200000032000000320000003200000032000000
+    listMonsterType2RefreshRatio: 320000003200000032000000320000003200000032000000320000003200000032000000320000003200000032000000
   allDoor:
   - {fileID: 1479588790}
   - {fileID: 235829011}
+  mRefreshMonsterToday:
+    monsterCreateNumber: 0
+    refreshTime: 1
+    listMonsterDoorsItem: []
+    listMonsterType1RefreshNumber: 
+    listMonsterType2RefreshNumber: 
+    listMonsterType1RefreshRatio: 
+    listMonsterType2RefreshRatio: 
   currentDay: 1
   currentRefreshTime: 1
+  bWork: 1
 --- !u!1 &335483971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,7 +3342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1000, y: -266}
+  m_AnchoredPosition: {x: -938, y: -266}
   m_SizeDelta: {x: 76.7, y: 1680.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1131517105
@@ -3807,8 +3911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 20
-  NightTime: 60
+  MonringTime: 2
+  NightTime: 3
   bMorning: 1
   currentDay: 1
   morning: {fileID: 971077299}
@@ -4375,7 +4479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -47, y: 358}
+  m_AnchoredPosition: {x: -47, y: 317}
   m_SizeDelta: {x: 76.7, y: 1680.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1418289047
@@ -6183,7 +6287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 904, y: -217}
+  m_AnchoredPosition: {x: 834, y: -217}
   m_SizeDelta: {x: 76.7, y: 1680.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2047957362
@@ -6523,7 +6627,7 @@ MonoBehaviour:
   - {fileID: 1352136541691313287, guid: f1903ec11bbdc014492973dbfae2cf6e, type: 3}
   playerMove: {fileID: 2333537110046420652}
   playerProperty: {fileID: 2333537110046420655}
-  showTime: 5
+  showTime: 1
   useValue: 20
 --- !u!1001 &2948802720140950297
 PrefabInstance:

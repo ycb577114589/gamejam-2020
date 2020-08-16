@@ -36,7 +36,6 @@ public class PlayerWeaponSys : MonoBehaviour
             currenTime = showTime;
             curWeapon.SetActive(true);
             playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Mp, -useValue);
-
         }
 
 

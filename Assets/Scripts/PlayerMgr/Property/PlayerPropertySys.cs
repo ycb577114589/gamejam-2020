@@ -90,17 +90,18 @@ public class PlayerPropertySys  :MonoBehaviour
 
         GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
         GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
+        GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Mp]  * 1.0f / mPropertyValueMax[(int)PropertyValueType.Mp];
+
         if (hasDead == false)
         {
             if (GameRoot.BattleUIMgrInScene.hpSlider.value <= 0)
             {
-                
+
                 deadPanel.SetActive(true);
                 deadMessage.text = "你坚持了" + timerSys.currentDay + "天";
                 hasDead = true;
             }
         }
-
     }
 
     public float GetValue(PropertyValueType type )
