@@ -141,5 +141,6 @@ public class Food : MonoBehaviour,IPointerClickHandler
         print(intro);
         print("food的Use事件");
         playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, hp, hpRiseTime);
+        Destroy(gameObject);
     }
 }

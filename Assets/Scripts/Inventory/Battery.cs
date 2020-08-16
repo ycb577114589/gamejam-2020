@@ -67,6 +67,7 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     {
         print("battery的Use事件");
         playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Mp, mp);
+        Destroy(gameObject);
     }
 }
 

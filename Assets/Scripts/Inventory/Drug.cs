@@ -65,5 +65,6 @@ public class Drug : MonoBehaviour, IPointerClickHandler
         print(intro);
         print("drug的Use事件");
         playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, hp);
+        Destroy(gameObject);
     }
 }

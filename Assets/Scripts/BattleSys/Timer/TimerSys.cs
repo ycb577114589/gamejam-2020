@@ -7,7 +7,7 @@ public class TimerSys : MonoBehaviour
 {
     public float MonringTime = 10f;
     public float NightTime = 20f;
-    private float currentTime = 0f;
+    public float currentTime = 0f;
     public bool bMorning = true;
 
     public int currentDay = 1;
