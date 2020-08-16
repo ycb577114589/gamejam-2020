@@ -8,10 +8,14 @@ public class MonoRoot : MonoBehaviour
     [SerializeField]
     private GameObject root = null;
     public BattleUIMgr BattleUI;
-     
-    void Start()
+
+    void Awake()
     {
-        GameRoot.SetMonoRoot(this);
+        Screen.SetResolution(1600, 900, false);
+    }
+    void Start()
+    { 
+         GameRoot.SetMonoRoot(this);
         DontDestroyOnLoad(root);//切换场景不销毁clone 
     }
 
