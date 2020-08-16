@@ -10,7 +10,7 @@ public class PlayerWeaponSys : MonoBehaviour
     public int buffWidth=0;
 
     public GameObject[] weapons;
-    private GameObject curWeapon;
+    public GameObject curWeapon;
 
     public PlayerMoveSys playerMove = null;
     public PlayerPropertySys playerProperty = null;
@@ -51,12 +51,12 @@ public class PlayerWeaponSys : MonoBehaviour
     }
     private void Start()
     {
-        curWeapon = GameObject.FindGameObjectWithTag("Weapon");
+        //curWeapon = GameObject.FindGameObjectWithTag("Weapon");
         curWeapon.transform.SetParent(transform);
     }
     void ChangeWeapon()
     {
-        Vector3 temp = curWeapon.transform.position; ;
+        Vector3 temp = curWeapon.transform.position;
         if (curWeapon != null)
         {
             Destroy(curWeapon);

@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 569791146854655878}
   - component: {fileID: 8208867320556918098}
   - component: {fileID: 3992201100844256727}
-  - component: {fileID: 778916340996912126}
+  - component: {fileID: 3879740507074323336}
   m_Layer: 8
   m_Name: Monster_Base
   m_TagString: Untagged
@@ -309,7 +309,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
---- !u!95 &778916340996912126
+--- !u!95 &3879740507074323336
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

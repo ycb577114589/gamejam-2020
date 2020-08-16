@@ -54,8 +54,8 @@ public class MonsterItem : MonoBehaviour
         }
 
         dir = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);//给游戏物体一个初始方向，让它去撞击边界触发器
-        Anim = GetComponent<Animator>();
-        Anim.Play("mayiWalk");
+        //Anim = GetComponent<Animator>();
+        //Anim.Play("mayiWalk");
         time = 0;
         isWalk = true;
     }
@@ -88,7 +88,7 @@ public class MonsterItem : MonoBehaviour
             }
             if(dis <= attackDistance && currentAttackTime<=0)
             {
-                Anim.Play("Attack");
+                //Anim.Play("Attack");
                 currentAttackTime = attackRefreshTime;
                 if (playerProperty != null)
                     playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
@@ -107,7 +107,7 @@ public class MonsterItem : MonoBehaviour
         if (isWalk)
         {
             //运动: 
-            Anim.Play("mayiWalk");
+            //Anim.Play("mayiWalk");
             transform.localPosition += dir.normalized * speed * Time.deltaTime;
         }
         else
