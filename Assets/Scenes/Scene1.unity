@@ -1874,7 +1874,7 @@ MonoBehaviour:
   - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
   baseOrSpecalBox: 5000000014000000
   baseRadio: 230000001900000028000000
-  specialRadio: 19000000190000001900000019000000
+  specialRadio: 1400000014000000140000001400000014000000
   foods:
   - {fileID: 1424137985170409809, guid: de1ede3b5195b164dadef58c5a7cd722, type: 3}
   - {fileID: 1424137985170409809, guid: 8c9978c8139e331458d32bad779c412b, type: 3}
@@ -1891,6 +1891,10 @@ MonoBehaviour:
   - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
   - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
   BatteryRatio: 000000003200000032000000
+  update:
+  - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
+  - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
+  updateRatio: 3200000032000000
   others: []
   othersRatio: 
   levelRatio: 46000000140000000a000000
@@ -3702,8 +3706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 2
-  NightTime: 3
+  MonringTime: 15
+  NightTime: 5
   bMorning: 1
   currentDay: 1
   morning: {fileID: 971077299}
