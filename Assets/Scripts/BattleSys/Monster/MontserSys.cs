@@ -86,6 +86,7 @@ public class MontserSys : MonoBehaviour
                 mRefreshMonsterToday.listMonsterType1RefreshRatio[mCurrentMonsterNo],     mRefreshMonsterToday.listMonsterType2RefreshRatio[mCurrentMonsterNo],
                 mRefreshMonsterToday.listMonsterType1RefreshNumber[mCurrentMonsterNo],    mRefreshMonsterToday.listMonsterType2RefreshNumber[mCurrentMonsterNo]);
             mCurrentMonsterNo++;
+            currentOpenDoorTimer++;
         }
     }
 }

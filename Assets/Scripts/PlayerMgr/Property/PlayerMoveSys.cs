@@ -19,6 +19,10 @@ public class PlayerMoveSys : MonoBehaviour
     Vector3 moveTowardPosition = Vector3.zero;
     Vector3 moveDirection = Vector3.zero;
 
+    public Transform up = null;
+    public Transform down = null;
+    public Transform left = null;
+    public Transform right = null;
     void FixedUpdate()
     {
         if ((GameRoot.BattleUIMgrInScene!=null && GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel))
@@ -30,24 +34,28 @@ public class PlayerMoveSys : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.position = transform.position + new Vector3(1.0f, 0, 0.0f) * moveSpeed;
-            weapon.position = transform.position + new Vector3(65f,-10f,0);
             weapon.rotation = Quaternion.Euler(0, 0, 270);
+            weapon.position = right.position;
         }
         else if (Input.GetKey("s"))
         {
             transform.position = transform.position + new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed;
+            weapon.position = down.position;
             weapon.rotation = Quaternion.Euler(0, 0, 180);
 
         }
         else if (Input.GetKey("a"))
         {
             transform.position = transform.position + new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed;
+            weapon.position = left.position;
             weapon.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (Input.GetKey("w"))
         {
             transform.position = transform.position + new Vector3(0.0f, 1.0f, 0.0f) * moveSpeed;
+            weapon.position = up.position;
             weapon.rotation = Quaternion.Euler(0, 0, 0);
+            
         }
     }
 } 
