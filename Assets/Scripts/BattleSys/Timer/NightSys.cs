@@ -34,8 +34,8 @@ public class NightSys : MonoBehaviour
             //}
         }
     }
-    public void NightBegin()
+    public void NightBegin(int day)
     {
-        mMontserSys.BeinNight(); 
+        mMontserSys.BeinNight(day); 
     }
 }

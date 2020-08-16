@@ -19,7 +19,7 @@ public class TimerSys : MonoBehaviour
     public PlayableAsset dayToNight;
     public PlayableAsset nightToDay;
 
-    
+    public int maxDay = 3;
     void Start()
     {
         director = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayableDirector>();
@@ -51,7 +51,7 @@ public class TimerSys : MonoBehaviour
                 morning.SetActive(false);
                 currentTime = NightTime;
                 night.SetActive(true);
-                night.GetComponent<NightSys>().NightBegin();
+                night.GetComponent<NightSys>().NightBegin(currentDay);
 
             }
             else
@@ -68,7 +68,10 @@ public class TimerSys : MonoBehaviour
                 night.SetActive(false);
                 morning.GetComponent<MorningSys>().MorningBegin();
             }
-
+            if (currentDay > maxDay)
+            {
+                Debug.LogError("success");
+            }
         }
     }
     public void RefreshTime (bool bMorning)

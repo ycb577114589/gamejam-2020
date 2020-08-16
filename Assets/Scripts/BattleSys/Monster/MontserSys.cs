@@ -48,9 +48,11 @@ public class MontserSys : MonoBehaviour
     {
         bWork = false;        
     }
-    public void BeinNight()
+    public void BeinNight(int day)
     {
         bWork = true;
+
+        SetTodayNightInfo(day);
     }
     void Start()
     {
