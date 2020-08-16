@@ -83,7 +83,7 @@ public class PlayerPropertySys  :MonoBehaviour
         }
 
         GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
-        GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
+        GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Mp]  * 1.0f / mPropertyValueMax[(int)PropertyValueType.Mp];
     }
 
     public float GetValue(PropertyValueType type )

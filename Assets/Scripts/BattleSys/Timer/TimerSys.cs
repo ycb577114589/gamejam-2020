@@ -18,7 +18,7 @@ public class TimerSys : MonoBehaviour
     public PlayableDirector director;
     public PlayableAsset dayToNight;
     public PlayableAsset nightToDay;
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,7 @@ public class TimerSys : MonoBehaviour
         {
             if (bMorning)
             {
+
                 director.playableAsset = dayToNight;//白天到黑夜切换
                 director.Play();
 
@@ -52,6 +53,7 @@ public class TimerSys : MonoBehaviour
                 morning.SetActive(false);
                 currentTime = NightTime;
                 night.SetActive(true);
+
             }
             else
             {
@@ -61,9 +63,11 @@ public class TimerSys : MonoBehaviour
                 currentDay++;
                 bMorning = true;
                 night.GetComponent<NightSys>().NightOver();
+
                 currentTime = MonringTime;
                 morning.SetActive(true);
                 night.SetActive(false);
+                morning.GetComponent<MorningSys>().MorningBegin();
             }
 
         }

@@ -33,4 +33,13 @@ public class MorningSys : MonoBehaviour
         }
         
     }
+    public void MorningBegin()
+    {
+
+        for (int i = 0; i < mWallMgr.wallList.Count; i++)
+        {
+            WallItemSys item = mWallMgr.wallList[i];
+            item.ReBegin();
+        }
+    }
 }
