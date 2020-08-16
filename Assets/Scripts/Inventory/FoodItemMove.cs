@@ -73,7 +73,11 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             transform.position = Input.mousePosition;
             FoodPos = transform.position;
+
+            Destroy(transform.gameObject, 2);
+            
             print(FoodPos);
+
         }
         else
         {
