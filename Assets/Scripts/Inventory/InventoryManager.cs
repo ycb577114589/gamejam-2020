@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public GameObject go_Inventory;
     public Inventory inventory;
+    public GameObject panel;
     private void Start()
     {
         //打开箱子生成面板和物品的调用方法：
@@ -31,6 +32,7 @@ public class InventoryManager : MonoBehaviour
     {
         GameObject go = GameObject.Instantiate(go_Inventory, transform.position, Quaternion.identity, transform);//先生成InventoryGameObject
         inventory = go.GetComponent<Inventory>();//获取脚本后，调用SetInventory函数，这个函数有3个重载，通过传入不同的参数可以生成不同的物品
+        go.transform.SetParent(panel.transform);
         if(type== Inventory.ItemType.food)
         {
             inventory.SetInventory(type,id , quality, Inventory.FoodState.good);
@@ -38,6 +40,13 @@ public class InventoryManager : MonoBehaviour
         else
         {
             inventory.SetInventory(type, id, quality);
+        }
+    }
+    public  bool bPauseByPanel
+    {
+        get
+        {
+            return panel.transform.childCount!=0;
         }
     }
 }

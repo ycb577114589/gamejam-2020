@@ -46,7 +46,7 @@ public class PlayerPropertySys  :MonoBehaviour
                 GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)type] * 1.0f / mPropertyValueMax[(int)type];
                 break;
             case PropertyValueType.Mp:
-                GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)type] * 1.0f / mPropertyValueMax[(int)type];
+                GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)type] * 1.0f / mPropertyValueMax[(int)type];
                 break;
         }
     }

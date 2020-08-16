@@ -13,6 +13,7 @@ public class PlayerWeaponSys : MonoBehaviour
     private GameObject curWeapon;
 
     public PlayerMoveSys playerMove = null;
+    public PlayerPropertySys playerProperty = null;
     public void ResetWeaponDamage(int damage)
     {
         mDamage = damage;
@@ -27,10 +28,19 @@ public class PlayerWeaponSys : MonoBehaviour
 
     public float showTime = 0.5f;
     private float currenTime = 0f;
+    public float useValue = 0f;
     public void UseWeapon()
     {
-        currenTime = showTime;
-        curWeapon.SetActive(true);
+        if (playerProperty.GetValue(PlayerPropertySys.PropertyValueType.Mp) > 0)
+        {
+            currenTime = showTime;
+            curWeapon.SetActive(true);
+            playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Mp, -useValue);
+
+        }
+
+
+
     }
     private void Update()
     {

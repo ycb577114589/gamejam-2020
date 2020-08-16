@@ -21,14 +21,10 @@ public class PlayerMoveSys : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!GameRoot.Instance.CanContinueTimer)
+        if ((GameRoot.BattleUIMgrInScene!=null && GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel))
         {
             return;
-        }
-        if (Inventory.panelShow)
-        {
-            return;
-        }
+        } 
 
         Vector3 curenPosition = this.transform.position;
         if (Input.GetKey("d"))

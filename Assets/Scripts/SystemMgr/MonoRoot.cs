@@ -86,7 +86,7 @@ public class GameRoot
         {
             if (MonoRoot == null||MonoRoot.BattleUI==null)
             {
-                UnityEngine.Debug.LogError("BattleUIMgrInScene is null");
+                UnityEngine.Debug.LogWarning("BattleUIMgrInScene is null");
                 return null;
             }
             return MonoRoot.BattleUI;

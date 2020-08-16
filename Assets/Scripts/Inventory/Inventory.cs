@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public ItemQuality Quality;
     public FoodState State;
 
-    public static bool panelShow = false;
+    public bool panelShow = true;
     public GameObject boxPanel;//开箱的弹窗
     public Text introducrion;//说明文字
 

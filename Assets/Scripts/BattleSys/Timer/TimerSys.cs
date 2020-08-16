@@ -21,12 +21,13 @@ public class TimerSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Inventory.panelShow)
+
+        if (GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel)
         {
             return;
         }
 
-        if(currentTime != 0)
+        if (currentTime != 0)
         {
             currentTime -= Time.deltaTime;
         }

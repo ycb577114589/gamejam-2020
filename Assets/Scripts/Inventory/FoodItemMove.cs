@@ -18,7 +18,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         image = transform.GetComponent<Image>();
         inventoryManager = GameObject.Find("InventoryManager").GetComponent<Transform>();
-        originParent = gameObject.transform.parent.GetComponent<Transform>();
+        originParent = gameObject.GetComponentInParent<Transform>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -41,7 +41,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             if(isNew==true)
             {
                 Inventory iv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-                Inventory.panelShow = false;
+                iv.panelShow = false;
             }
             //直接放上去
             isNew = false;

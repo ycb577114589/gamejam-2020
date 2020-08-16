@@ -39,6 +39,10 @@ public class WallItemSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel)
+        {
+            return;
+        }
         if (bRefreshItem)
         {
             System.Random ra = new System.Random();
