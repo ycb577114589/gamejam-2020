@@ -37,11 +37,11 @@ public class Upgrade : MonoBehaviour
         {//装备上
             if(buff==false)
             {
-                if(ID==1)
+                if(ID==0)
                 {
                     playerWeaponSys.AddLength();
                 }
-                else if(ID==2)
+                else if(ID==1)
                 {
                     playerWeaponSys.AddWidth();
                 }
@@ -49,15 +49,19 @@ public class Upgrade : MonoBehaviour
                 deBuff = false;
             }
         }
+        else if(gameObject.transform.parent.tag=="Inventory")
+        {
+
+        }
         else
         {//没装备上
             if(deBuff==false)
             {
-                if(ID==1)
+                if(ID==0)
                 {
                     playerWeaponSys.ReduceLength();
                 }
-                else if(ID==2)
+                else if(ID==1)
                 {
                     playerWeaponSys.ReduceWidth();
                 }
