@@ -11,6 +11,8 @@ TagManager:
   - Inventory
   - Ground
   - Box
+  - Weapon
+  - Food
   layers:
   - Default
   - TransparentFX

@@ -50,7 +50,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             transform.localScale = Vector3.one;
             image.raycastTarget = true;
         }
-        else if (target.tag == "Item")//槽里边有物品
+        else if (target.tag == "Item" || target.tag == "Food")//槽里边有物品
         {
             //若是槽之间物品的移动，则替换物品
             if (isNew == false)
