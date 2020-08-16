@@ -21,6 +21,11 @@ public class TimerSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( Inventory.panelShow)
+        {
+            return;
+        }
+
         if(currentTime != 0)
         {
             currentTime -= Time.deltaTime;

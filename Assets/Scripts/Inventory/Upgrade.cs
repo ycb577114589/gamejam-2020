@@ -35,7 +35,6 @@ public class Upgrade : MonoBehaviour
     {
         if(gameObject.transform.parent.tag=="Slot")
         {//装备上
-            print("debug");
             if(buff==false)
             {
                 if(ID==1)

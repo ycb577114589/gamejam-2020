@@ -65,6 +65,8 @@ public class MonsterItem : MonoBehaviour
     private float currentAttackTime = 0f;
     void FixedUpdate()
     {
+        if (GameRoot.BattleUIMgrInScene.inventory != null && Inventory.panelShow)
+            return;
         time += Time.deltaTime;//定时
         currentAttackTime -= Time.deltaTime;
         int dis =(int) (transform.position - player.transform.position).sqrMagnitude;

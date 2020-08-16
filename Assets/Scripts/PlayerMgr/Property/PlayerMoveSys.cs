@@ -25,6 +25,10 @@ public class PlayerMoveSys : MonoBehaviour
         {
             return;
         }
+        if (Inventory.panelShow)
+        {
+            return;
+        }
 
         Vector3 curenPosition = this.transform.position;
         if (Input.GetKey("d"))

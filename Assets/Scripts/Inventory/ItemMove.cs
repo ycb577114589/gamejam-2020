@@ -40,7 +40,7 @@ public class ItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (isNew == true)
             {
                 Inventory iv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-                iv.panelShow = false;
+                Inventory.panelShow = false;
             }
 
             //直接放上去

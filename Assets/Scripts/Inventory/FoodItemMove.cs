@@ -41,7 +41,7 @@ public class FoodItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             if(isNew==true)
             {
                 Inventory iv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-                iv.panelShow = false;
+                Inventory.panelShow = false;
             }
             //直接放上去
             isNew = false;
