@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1873,9 +1873,9 @@ MonoBehaviour:
   box:
   - {fileID: 6915183970708991908, guid: 62e922a9bd19a7842a0d74a340ee947b, type: 3}
   - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
-  baseOrSpecalBox: 5000000014000000
+  baseOrSpecalBox: 0000000064000000
   baseRadio: 230000001900000028000000
-  specialRadio: 1400000014000000140000001400000014000000
+  specialRadio: 0000000000000000000000003200000032000000
   foods:
   - {fileID: 1424137985170409809, guid: de1ede3b5195b164dadef58c5a7cd722, type: 3}
   - {fileID: 1424137985170409809, guid: 8c9978c8139e331458d32bad779c412b, type: 3}
@@ -3913,7 +3913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 5
+  MonringTime: 15
   NightTime: 5
   bMorning: 1
   currentDay: 1
@@ -6628,6 +6628,7 @@ MonoBehaviour:
   - {fileID: 4120515296216068822, guid: dc41202f3c7e3a54081b819f387d6113, type: 3}
   - {fileID: 6869499136087821084, guid: 39fc2af9ba067b5488e21a5e70207ac0, type: 3}
   - {fileID: 1352136541691313287, guid: f1903ec11bbdc014492973dbfae2cf6e, type: 3}
+  curWeapon: {fileID: 7173928996835262742}
   playerMove: {fileID: 2333537110046420652}
   playerProperty: {fileID: 2333537110046420655}
   showTime: 1

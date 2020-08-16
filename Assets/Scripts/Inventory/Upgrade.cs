@@ -20,10 +20,10 @@ public class Upgrade : MonoBehaviour
         switch (id)
         {
             case 0:
-                intro += "光线长度升级 手电光线长度变得更长";
+                intro += "光线长度升级 更远距离";
                 break;
             case 1:
-                intro += "光线宽度升级 手电光线宽度变得更宽";
+                intro += "光线宽度升级 更广范围";
                 break;
         }
     }
@@ -37,28 +37,38 @@ public class Upgrade : MonoBehaviour
         {//装备上
             if(buff==false)
             {
-                if(ID==1)
+
+                if(ID==0)
                 {
+                    print("AddLength");
                     playerWeaponSys.AddLength();
                 }
-                else if(ID==2)
+                else if(ID==1)
                 {
+                    print("AddWidth");
                     playerWeaponSys.AddWidth();
                 }
                 buff = true;
                 deBuff = false;
             }
         }
+        else if(gameObject.transform.parent.tag=="Inventory")
+        {
+            //此时是物品还在面板上，什么都不要调用
+        }
         else
         {//没装备上
+            print("debug");
             if(deBuff==false)
             {
-                if(ID==1)
+                if(ID==0)
                 {
+                    print("ReduceLength");
                     playerWeaponSys.ReduceLength();
                 }
-                else if(ID==2)
+                else if(ID==1)
                 {
+                    print("ReduceWidth");
                     playerWeaponSys.ReduceWidth();
                 }
                 buff = false;
