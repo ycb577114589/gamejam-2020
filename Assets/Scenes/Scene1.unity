@@ -6633,7 +6633,7 @@ MonoBehaviour:
   playerMove: {fileID: 2333537110046420652}
   playerProperty: {fileID: 2333537110046420655}
   showTime: 1
-  useValue: 20
+  useValue: 10
 --- !u!1001 &2948802720140950297
 PrefabInstance:
   m_ObjectHideFlags: 0
