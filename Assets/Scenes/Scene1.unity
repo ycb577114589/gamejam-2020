@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1889,9 +1889,7 @@ MonoBehaviour:
   drugRatio: 280000002800000014000000
   battery:
   - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
-  - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
-  - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
-  BatteryRatio: 000000003200000032000000
+  BatteryRatio: 46000000140000000a000000
   update:
   - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
   - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
