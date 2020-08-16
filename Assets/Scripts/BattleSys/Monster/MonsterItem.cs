@@ -75,7 +75,7 @@ public class MonsterItem : MonoBehaviour
         {
             int dis = (int)(transform.position - food.transform.position).sqrMagnitude;
             if (dis <= attackDistance)
-            {
+            { 
                 return;
             }
         }
@@ -86,8 +86,9 @@ public class MonsterItem : MonoBehaviour
             {
                 return;
             }
-            if(dis<= attackDistance&&currentAttackTime<=0)
+            if(dis <= attackDistance && currentAttackTime<=0)
             {
+                Anim.Play("Attack");
                 currentAttackTime = attackRefreshTime;
                 if (playerProperty != null)
                     playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Hp, -Damage);
