@@ -1636,7 +1636,7 @@ Animator:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cca03b8af41732541939afc4a6386cdc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 40
+  MonringTime: 2
   NightTime: 60
   bMorning: 1
   currentDay: 1
