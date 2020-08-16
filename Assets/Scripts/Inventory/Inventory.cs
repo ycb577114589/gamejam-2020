@@ -102,7 +102,6 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            boxPanel.SetActive(false);
             Destroy(gameObject,0.1f);
         }
     }
