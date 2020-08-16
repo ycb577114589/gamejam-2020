@@ -597,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57, y: -61}
+  m_AnchoredPosition: {x: 104, y: -20}
   m_SizeDelta: {x: 562.4, y: 437.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224474973
@@ -785,14 +785,14 @@ RectTransform:
   m_GameObject: {fileID: 235829011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70725, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 318095933}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 731.9, y: -69.4}
+  m_AnchoredPosition: {x: 780, y: -69.4}
   m_SizeDelta: {x: 62.1, y: 162.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235829013
@@ -1373,12 +1373,12 @@ PrefabInstance:
     - target: {fileID: 3409473651330668748, guid: 8a959be5ba9101545a373b4c30c823a7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 3409473651330668748, guid: 8a959be5ba9101545a373b4c30c823a7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38
       objectReference: {fileID: 0}
     - target: {fileID: 3409473651330668748, guid: 8a959be5ba9101545a373b4c30c823a7,
         type: 3}
@@ -1694,7 +1694,9 @@ MonoBehaviour:
   others:
   - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
   othersRatio: 
-  levelRatio: 
+  levelRatio: 500000000a0000000a000000
+  levelDeltaRatio: f6ffffff0500000005000000
+  mLevelUseRatio: 000000000000000000000000
 --- !u!1 &605449912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,7 +2962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172.6, y: 8.1}
+  m_AnchoredPosition: {x: 172.6, y: -26}
   m_SizeDelta: {x: 640.8, y: 542.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!68 &1183455306
@@ -3221,9 +3223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 20
-  NightTime: 60
+  MonringTime: 5
+  NightTime: 5
   bMorning: 1
+  currentDay: 1
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}
 --- !u!1 &1287896548
@@ -3932,7 +3935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 275}
+  m_AnchoredPosition: {x: -1, y: 298}
   m_SizeDelta: {x: 191.9, y: 65.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479588792
@@ -4420,7 +4423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -71}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1695172479
@@ -5694,5 +5697,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1081773600}
+    - target: {fileID: 9174051993520888875, guid: 45e3657dae5491649a6cf23e0aa6d74b,
+        type: 3}
+      propertyPath: timerSys
+      value: 
+      objectReference: {fileID: 1285337967}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e3657dae5491649a6cf23e0aa6d74b, type: 3}

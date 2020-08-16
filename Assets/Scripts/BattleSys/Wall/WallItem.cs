@@ -20,6 +20,7 @@ public class WallItem : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             InventoryBase item = myContent.GetComponent<InventoryBase>();
+            Debug.LogError(item.quality);
             GameRoot.BattleUIMgrInScene.inventory.CreatePanel(item.type, item.id, item.quality, Inventory.FoodState.good);
             //iv.SetInventory(Inventory.ItemType.food, 3, Inventory.ItemQuality.common, Inventory.FoodState.good);
             this.gameObject.SetActive(false);

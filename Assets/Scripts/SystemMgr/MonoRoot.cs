@@ -8,7 +8,7 @@ public class MonoRoot : MonoBehaviour
     [SerializeField]
     private GameObject root = null;
     public BattleUIMgr BattleUI;
-    
+     
     void Start()
     {
         GameRoot.SetMonoRoot(this);
