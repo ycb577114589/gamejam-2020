@@ -37,6 +37,10 @@ public class InventoryManager : MonoBehaviour
         {
             inventory.SetInventory(type,id , quality, Inventory.FoodState.good);
         }
+        else if(type == Inventory.ItemType.other)
+        {
+            inventory.SetInventory(type, id);
+        }
         else
         {
             inventory.SetInventory(type, id, quality);

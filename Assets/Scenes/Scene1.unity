@@ -1889,7 +1889,7 @@ MonoBehaviour:
   drugRatio: 280000002800000014000000
   battery:
   - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
-  BatteryRatio: 46000000140000000a000000
+  BatteryRatio: 64000000
   update:
   - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
   - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
@@ -3922,6 +3922,7 @@ MonoBehaviour:
   director: {fileID: 534669907}
   dayToNight: {fileID: 11400000, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
   nightToDay: {fileID: 11400000, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
+  maxDay: 3
 --- !u!1 &1287896548
 GameObject:
   m_ObjectHideFlags: 0
