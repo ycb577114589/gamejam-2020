@@ -17,7 +17,7 @@ public class ItemMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         image = transform.GetComponent<Image>();
         inventoryManager = GameObject.Find("InventoryManager").GetComponent<Transform>();
-        originParent = gameObject.GetComponentInParent<Transform>();
+        originParent = gameObject.transform.parent.GetComponent<Transform>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
