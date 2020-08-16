@@ -99,6 +99,7 @@ public class PlayerWeaponSys : MonoBehaviour
                 }
                 break;
         }
+        //curWeapon.transform.SetParent()
         playerMove.weapon = curWeapon.transform;
     }
 

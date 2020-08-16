@@ -30,6 +30,7 @@ public class PlayerMoveSys : MonoBehaviour
         if (Input.GetKey("d"))
         {
             transform.position = transform.position + new Vector3(1.0f, 0, 0.0f) * moveSpeed;
+            weapon.position = transform.position + new Vector3(65f,-10f,0);
             weapon.rotation = Quaternion.Euler(0, 0, 270);
         }
         else if (Input.GetKey("s"))
