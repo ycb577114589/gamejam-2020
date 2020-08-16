@@ -163,7 +163,6 @@ public class WallMgr : MonoBehaviour
             if (switchId == 4 && others.Count > 0)
             {
                 int itemId = RandomBase(othersRatio,true);
-                Debug.LogError("here "+itemId);
                 return others[itemId];
             }
         }
