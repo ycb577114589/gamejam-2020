@@ -41,20 +41,39 @@ public class MontserSys : MonoBehaviour
     private int currentOpenDoorTimer = 0;
     //今天刷了第几波怪
     private int mCurrentMonsterNo = 0;
+
+    public bool bWork = true;
+
+    public void Reset()
+    {
+        bWork = false;        
+    }
+    public void BeinNight()
+    {
+        bWork = true;
+    }
     void Start()
     {
         SetTodayNightInfo(1);
-        for(int i = 0; i < allDoor.Count; i++)
+        for (int i = 0; i < allDoor.Count; i++)
         {
             allDoor[i].SetActive(false);
         }
-        for(int i = 0; i < mRefreshMonsterToday.listMonsterDoorsItem.Count; i++)
+        for (int i = 0; i < mRefreshMonsterToday.listMonsterDoorsItem.Count; i++)
         {
             mRefreshMonsterToday.listMonsterDoorsItem[i].gameObject.SetActive(true);
         }
     }
     public void SetTodayNightInfo(int todayNo)
     {
+        for (int i = 0; i < allDoor.Count; i++)
+        {
+            allDoor[i].SetActive(false);
+        }
+        for (int i = 0; i < mRefreshMonsterToday.listMonsterDoorsItem.Count; i++)
+        {
+            mRefreshMonsterToday.listMonsterDoorsItem[i].gameObject.SetActive(true);
+        }
         if (listRefreshMonsterOneDay.Count < todayNo)
         {
             Debug.LogError("today " + todayNo + " no config !!!");
@@ -77,6 +96,10 @@ public class MontserSys : MonoBehaviour
     }
     void Update()
     {
+        if (!bWork)
+        {
+            return;
+        }
         currentRefreshTime -= Time.deltaTime;
         if (currentRefreshTime <= 0 && mCurrentMonsterNo < mRefreshMonsterToday.monsterCreateNumber)
         {

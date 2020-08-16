@@ -53,6 +53,7 @@ public class TimerSys : MonoBehaviour
                 morning.SetActive(false);
                 currentTime = NightTime;
                 night.SetActive(true);
+                night.GetComponent<NightSys>().NightBegin();
 
             }
             else

@@ -26,6 +26,11 @@ public class NightSys : MonoBehaviour
             {
                 GameObject item = mMontserSys.mRefreshMonsterToday.listMonsterDoorsItem[j].gameObject;
 
+                for (int f = 0; f < item.transform.childCount; f++)
+                {
+                    Destroy(item.transform.GetChild(0).gameObject);
+                }
+                mMontserSys.Reset();
             }
             //int childCount = transform.childCount;
             //for (int j = 0; j < childCount; j++)
@@ -33,5 +38,9 @@ public class NightSys : MonoBehaviour
             //    Destroy(mMontserSys.mRefreshMonsterToday.listMonsterDoorsItem[j].GetChild(0).gameObject);
             //}
         }
+    }
+    public void NightBegin()
+    {
+        mMontserSys.BeinNight(); 
     }
 }

@@ -1151,6 +1151,7 @@ MonoBehaviour:
     listMonsterType2RefreshRatio: 
   currentDay: 1
   currentRefreshTime: 1
+  bWork: 1
 --- !u!1 &335483971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3701,8 +3702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 10
-  NightTime: 1
+  MonringTime: 2
+  NightTime: 3
   bMorning: 1
   currentDay: 1
   morning: {fileID: 971077299}
