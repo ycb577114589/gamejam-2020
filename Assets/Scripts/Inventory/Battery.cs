@@ -22,13 +22,13 @@ public class Battery : MonoBehaviour, IPointerClickHandler
         switch (Quality)
         {
             case Inventory.ItemQuality.common:
-                intro += "普通电池 立即回复电量30";
+                intro += "普通电池 立即回复电量20";
                 break;
             case Inventory.ItemQuality.rare:
-                intro += "稀有电池 立即回复电量50";
+                intro += "稀有电池 立即回复电量40";
                 break;
             case Inventory.ItemQuality.epic:
-                intro += "至尊电池 立即回复电量70";
+                intro += "至尊电池 立即回复电量60";
                 break;
         }
     }

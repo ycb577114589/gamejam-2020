@@ -77,6 +77,7 @@ public class WallMgr : MonoBehaviour
                     {
                         inventory.quality = ItemQuality.common;
                     }
+
                     else if(switchId == 1)
                     {
 
@@ -148,7 +149,7 @@ public class WallMgr : MonoBehaviour
             int itemId = RandomBase(BatteryRatio);
             return battery[itemId];
         }
-        if (switchId == 3)
+        if (switchId == 3 &&others.Count >0)
         {
             int itemId = RandomBase(othersRatio);
             return others[itemId];
@@ -171,6 +172,7 @@ public class WallMgr : MonoBehaviour
 
     public List<GameObject> battery = new List<GameObject>();
     public List<int> BatteryRatio = new List<int>();
+
     public List<GameObject> others = new List<GameObject>();
     public List<int> othersRatio = new List<int>();
 
