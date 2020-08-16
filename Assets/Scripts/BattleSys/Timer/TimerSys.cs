@@ -44,8 +44,8 @@ public class TimerSys : MonoBehaviour
         {
             if (bMorning)
             {
-                director.playableAsset = dayToNight;//白天到黑夜切换
-                director.Play();
+                //director.playableAsset = dayToNight;//白天到黑夜切换
+                //director.Play();
 
                 bMorning = false;
                 morning.GetComponent<MorningSys>().MorningOver();
@@ -55,8 +55,8 @@ public class TimerSys : MonoBehaviour
             }
             else
             {
-                director.playableAsset = nightToDay;//黑夜到白天切换
-                director.Play();
+                //director.playableAsset = nightToDay;//黑夜到白天切换
+                //director.Play();
 
                 currentDay++;
                 bMorning = true;

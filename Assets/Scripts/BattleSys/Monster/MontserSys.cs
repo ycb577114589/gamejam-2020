@@ -31,7 +31,7 @@ public class MontserSys : MonoBehaviour
 
     public List<RefreshMonsterOneDay> listRefreshMonsterOneDay = new List<RefreshMonsterOneDay>();
     public List<GameObject> allDoor = new List<GameObject>();
-    RefreshMonsterOneDay mRefreshMonsterToday = new RefreshMonsterOneDay();
+    public RefreshMonsterOneDay mRefreshMonsterToday = new RefreshMonsterOneDay();
 
     //今天第几天
     public int currentDay = 0;
