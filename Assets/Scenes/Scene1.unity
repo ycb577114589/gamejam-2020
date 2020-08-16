@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6639372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2009,11 +2009,11 @@ MonoBehaviour:
   - {fileID: 224474973}
   wallListRatio: 3200000032000000
   refreshTime: 0.1
-  bCurrentChooseBase: 0
+  bCurrentChooseBase: 1
   box:
   - {fileID: 6915183970708991908, guid: 62e922a9bd19a7842a0d74a340ee947b, type: 3}
   - {fileID: 6915183970708991908, guid: d01dda324a5665f4885aceeb64cbfcdc, type: 3}
-  baseOrSpecalBox: 1400000050000000
+  baseOrSpecalBox: 5000000014000000
   baseRadio: 230000001900000028000000
   specialRadio: 1400000014000000140000001400000014000000
   foods:
@@ -3085,7 +3085,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3248,7 +3248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1068667596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4160,17 +4160,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonringTime: 20
-  NightTime: 30
+  NightTime: 60
   currentTime: 0
   bMorning: 1
-  currentDay: 1
+  currentDay: 7
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}
   isDay: 0
   director: {fileID: 534669907}
   dayToNight: {fileID: 11400000, guid: 99d46243b150a1047bbb6d400ae69fc6, type: 2}
   nightToDay: {fileID: 11400000, guid: 07b6016b2d43ac44ab37e9d6496a228e, type: 2}
-  maxDay: 3
+  maxDay: 7
 --- !u!1 &1287896548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,7 +4469,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
