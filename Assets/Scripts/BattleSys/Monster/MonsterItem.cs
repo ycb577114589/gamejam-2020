@@ -65,7 +65,7 @@ public class MonsterItem : MonoBehaviour
     private float currentAttackTime = 0f;
     void FixedUpdate()
     {
-        if (GameRoot.BattleUIMgrInScene.inventory)
+        if (GameRoot.BattleUIMgrInScene.inventory.bPauseByPanel)
         {
             return;
         }

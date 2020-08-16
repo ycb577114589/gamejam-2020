@@ -81,6 +81,9 @@ public class PlayerPropertySys  :MonoBehaviour
         {
             lastAddTime = 0f; currentTime = 0f; hpRiseNumber = 0f; maxTime = 0f; deltaAddHp = 0f;
         }
+
+        GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
+        GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
     }
 
     public float GetValue(PropertyValueType type )

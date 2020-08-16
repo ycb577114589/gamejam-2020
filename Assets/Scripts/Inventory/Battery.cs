@@ -15,6 +15,8 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     private Inventory.ItemQuality Quality;
     public string intro="";
 
+    public PlayerPropertySys playerProperty;
+    public int mp = 0;
     public void SetBattery(int id, Inventory.ItemQuality quality)
     {
         ID = id;
@@ -23,17 +25,26 @@ public class Battery : MonoBehaviour, IPointerClickHandler
         {
             case Inventory.ItemQuality.common:
                 intro += "普通电池 立即回复电量20";
+                mp = 20;
                 break;
             case Inventory.ItemQuality.rare:
                 intro += "稀有电池 立即回复电量40";
+                mp = 40;
                 break;
             case Inventory.ItemQuality.epic:
                 intro += "至尊电池 立即回复电量60";
+                mp = 60;
                 break;
         }
     }
     void Start()
     {
+
+        var temp = GameObject.FindWithTag("Player");
+        if (temp != null)
+        {
+            playerProperty = temp.GetComponent<PlayerPropertySys>();
+        }
         leftClick.AddListener(new UnityAction(DoubleLeftClick));
         time = Time.time;
     }
@@ -55,6 +66,7 @@ public class Battery : MonoBehaviour, IPointerClickHandler
     public void Use()
     {
         print("battery的Use事件");
+        playerProperty.ChangeValue(PlayerPropertySys.PropertyValueType.Mp, mp);
     }
 }
 
