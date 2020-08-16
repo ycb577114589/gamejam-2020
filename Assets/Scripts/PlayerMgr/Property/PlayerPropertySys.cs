@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPropertySys  :MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerPropertySys  :MonoBehaviour
         Mp=2,
         Count=3,
     };
+
+    bool hasDead = false;
+    public GameObject deadPanel;
+    public Text deadMessage;
+    public TimerSys timerSys;
 
     private float[] mPropertyValue = new float[(int)PropertyValueType.Count];
     public float[] mPropertyValueMax = new float[(int)PropertyValueType.Count];
@@ -84,6 +90,17 @@ public class PlayerPropertySys  :MonoBehaviour
 
         GameRoot.BattleUIMgrInScene.hpSlider.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
         GameRoot.BattleUIMgrInScene.mpSilder.value = mPropertyValue[(int)PropertyValueType.Hp] * 1.0f / mPropertyValueMax[(int)PropertyValueType.Hp];
+        if (hasDead == false)
+        {
+            if (GameRoot.BattleUIMgrInScene.hpSlider.value <= 0)
+            {
+                
+                deadPanel.SetActive(true);
+                deadMessage.text = "你坚持了" + timerSys.currentDay + "天";
+                hasDead = true;
+            }
+        }
+
     }
 
     public float GetValue(PropertyValueType type )
