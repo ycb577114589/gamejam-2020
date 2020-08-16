@@ -641,7 +641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 101, y: -23}
+  m_AnchoredPosition: {x: 126, y: -76}
   m_SizeDelta: {x: 562.4, y: 437.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224474973
@@ -1889,13 +1889,14 @@ MonoBehaviour:
   drugRatio: 280000002800000014000000
   battery:
   - {fileID: 580941881446918316, guid: 75a042ef69efac24493cb1627c1d6984, type: 3}
-  BatteryRatio: 64000000
+  BatteryRatio: 46000000140000000a000000
   update:
   - {fileID: 1815464477331952862, guid: 47c157faa637ef7459b6371666342cea, type: 3}
   - {fileID: 1815464477331952862, guid: 6187cb3f0438d494291a9217b3e58a58, type: 3}
   updateRatio: 3200000032000000
-  others: []
-  othersRatio: 
+  others:
+  - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
+  othersRatio: 64000000
   levelRatio: 46000000140000000a000000
   levelDeltaRatio: feffffff0100000001000000
   mLevelUseRatio: 000000000000000000000000
@@ -2995,7 +2996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081773600
@@ -3490,7 +3491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5325}
   m_AnchorMax: {x: 0.5, y: 0.5325}
-  m_AnchoredPosition: {x: 0, y: 6.5000305}
+  m_AnchoredPosition: {x: 77, y: 6.5000305}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162402616
