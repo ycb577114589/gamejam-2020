@@ -3915,8 +3915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 5
-  NightTime: 5
+  MonringTime: 40
+  NightTime: 60
   bMorning: 1
   currentDay: 1
   morning: {fileID: 971077299}
