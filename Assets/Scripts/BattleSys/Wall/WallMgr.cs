@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Inventory;
 
 public class WallMgr : MonoBehaviour
 {
@@ -10,14 +11,13 @@ public class WallMgr : MonoBehaviour
 
     public List<int> wallListRatio = new List<int>();
 
-
-
     public float refreshTime = 1;
     private float currentTime = 0;
     // Start is called before the first frame update
     void Start()
     {
         currentTime = refreshTime;
+         
     }
 
     public void Reset()
@@ -67,7 +67,25 @@ public class WallMgr : MonoBehaviour
                 {
                     InventoryBase inventory =createObj.GetComponent<InventoryBase>();
 
+                    for (int i = 0; i < levelRatio.Count; i++)
+                    {
+                        mLevelUseRatio[i] = levelRatio[i] + levelDeltaRatio[i] * GameRoot.BattleUIMgrInScene.timerSys.currentDay;
+                    }
 
+                    int switchId = RandomBase(levelRatio);
+                    if(switchId == 0)
+                    {
+                        inventory.quality = ItemQuality.common;
+                    }
+                    else if(switchId == 1)
+                    {
+
+                        inventory.quality = ItemQuality.epic;
+                    }
+                    else
+                    {
+                        inventory.quality = ItemQuality.rare;
+                    }
                     wallList[chooseItem].SetThing = createObj;
 
                     if (bCurrentChooseBase)
@@ -157,6 +175,9 @@ public class WallMgr : MonoBehaviour
     public List<int> othersRatio = new List<int>();
 
     public List<int> levelRatio = new List<int>();
+    public List<int> levelDeltaRatio = new List<int>();
+
+    public List<int> mLevelUseRatio = new List<int>();
 
 
 }

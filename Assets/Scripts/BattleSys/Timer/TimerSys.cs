@@ -9,6 +9,7 @@ public class TimerSys : MonoBehaviour
     private float currentTime = 0f;
     public bool bMorning = true;
 
+    public int currentDay = 1;
     public GameObject morning = null;
     public GameObject night = null;
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class TimerSys : MonoBehaviour
         if (currentTime <= 0)
         {
             if (bMorning)
-            {
+            { 
                 bMorning = false;
                 morning.GetComponent<MorningSys>().MorningOver();
                 morning.SetActive(false);
@@ -36,6 +37,7 @@ public class TimerSys : MonoBehaviour
             }
             else
             {
+                currentDay++;
                 bMorning = true;
                 night.GetComponent<NightSys>().NightOver();
                 currentTime = MonringTime;

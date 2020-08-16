@@ -1694,7 +1694,9 @@ MonoBehaviour:
   others:
   - {fileID: 1659443415536645916, guid: 6d253a36d4257ba48a6456f3dcd5e36a, type: 3}
   othersRatio: 
-  levelRatio: 
+  levelRatio: 500000000a0000000a000000
+  levelDeltaRatio: f6ffffff0500000005000000
+  mLevelUseRatio: 000000000000000000000000
 --- !u!1 &605449912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,9 +3223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b36e4949f1b44794002834500588c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonringTime: 20
-  NightTime: 60
+  MonringTime: 5
+  NightTime: 5
   bMorning: 1
+  currentDay: 1
   morning: {fileID: 971077299}
   night: {fileID: 1101325023}
 --- !u!1 &1287896548
@@ -5694,5 +5697,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1081773600}
+    - target: {fileID: 9174051993520888875, guid: 45e3657dae5491649a6cf23e0aa6d74b,
+        type: 3}
+      propertyPath: timerSys
+      value: 
+      objectReference: {fileID: 1285337967}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e3657dae5491649a6cf23e0aa6d74b, type: 3}

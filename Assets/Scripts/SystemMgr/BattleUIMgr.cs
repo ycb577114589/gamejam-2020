@@ -16,6 +16,7 @@ public class BattleUIMgr : MonoBehaviour
 
     public List<GameObject> AirWall = new List<GameObject>();
     public InventoryManager inventory = null;
+    public TimerSys timerSys = null;
     void Start()
     {
 
